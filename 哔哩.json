@@ -1,0 +1,27 @@
+{
+"spider":"./b站/b站.jar",
+"sites":[
+{"key": "csp_Bili合集","name": "合集","type": 3,"api": "csp_Bili","searchable": 1,"quickSearch": 0,"filterable": 0,"ext": "./b站/合集.json"},
+
+{"key": "csp_Bili演唱会","name": "演唱会","type": 3,"api": "csp_Bili","searchable": 0,"quickSearch": 0,"filterable": 0,"ext": "./b站/演唱会.json"},
+
+{"key": "csp_Bili相声","name": "相声","type": 3,"api": "csp_Bili","searchable": 0,"quickSearch": 0,"filterable": 0,"ext": "./b站/相声.json"},
+
+{"key": "csp_Bili明星","name": "明星","type": 3,"api": "csp_Bili","searchable": 0,"quickSearch": 0,"filterable": 0,"ext": "./b站/明星.json"},
+
+{"key": "csp_Bili歌曲","name": "歌曲","type": 3,"api": "csp_Bili","searchable": 0,"quickSearch": 0,"filterable": 0,"ext": "./b站/歌曲.json"},
+
+{"key": "csp_Bili戏曲","name": "戏曲","type": 3,"api": "csp_Bili","searchable": 0,"quickSearch": 0,"filterable": 0,"ext": "./b站/戏曲.json"},
+
+{"key": "音乐","name": "音乐合集","type": 3,"api": "csp_Bili","ext": "./b站/音乐.json"},
+
+{"key":"哔哩直播","name":"哔哩直播","type":3,"api":"https://ghproxy.net/https://raw.githubusercontent.com/hjdhnx/dr_py/main/libs/drpy2.min.js","ext":"https://ghproxy.net/https://raw.githubusercontent.com/hjdhnx/dr_py/main/js/哔哩直播.js"},
+
+{"key":"Taohuazu","name":"桃花族🔞","type":3,"api":"csp_Taohuazu","searchable":1,"quickSearch":1, "changeable":1, "filterable":0, "timeout":60,"jar":"./jar/pg.jar"},
+
+{"key":"SeHuaTang","name":"色花堂🔞","type":3,"api":"csp_SeHuaTang","searchable":1,"quickSearch":1, "changeable":1, "filterable":0, "timeout":60, "ext":"null$$$proxy","style": {"type": "rect","ratio": 1.5},"jar":"./jar/pg.jar"},
+
+{"key":"色播","name":"色播🔞","type":3,"api":"./json/色播.js","searchable":1,"changeable":0,"style":{"type":"list"}}
+
+]
+}
