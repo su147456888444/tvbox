@@ -1,0 +1,17 @@
+{
+"spider":"./jar/0312.jar",
+"sites":[
+{"key":"荐片","name":"//JianPian","type":3,"api":"csp_JianPian","searchable":1,"quickSearch":0,"filterable":1,"changeable":0,"hide":1,"ext":"https://ownjpykxttjzuhy.jiesiwa.com"},
+
+{"key":"阿里盘搜","name":"//阿里盘","type":3,"api":"csp_AliPS","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"hide":1,"ext":"http://127.0.0.1:9978/file/XYQTVBox/alitoken.txt"},
+
+{"key":"盘搜索","name":"//盘搜索","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"hide":1,"ext":"./json/盘搜索.json"},
+
+{"key":"云盘资源","name":"//云盘资","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"hide":1,"ext":"./json/云盘资源.json"},
+
+{"key":"找资源","name":"//找资源","type":3,"api":"csp_Zhaozy","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"playerType":-1,"hide":1,"ext":"{\"username\":\"657545000@qq.com\",\"password\":\"147456\",\"searchurl\":\"https://zhaoziyuan1.cc/so?filename={wd}\"}"},
+
+{"key":"push_agent","name":"//推送丷","type":3,"api":"csp_PushAgent","searchable":0,"quickSearch":0,"filterable":0,"changeable":0,"hide":1,"ext":"http://127.0.0.1:9978/file/XYQTVBox/alitoken.txt"}
+]
+
+}
