@@ -5,6 +5,6 @@
 
 {"key":"SeHuaTang","name":"色花堂🔞","type":3,"api":"csp_SeHuaTang","searchable":1,"quickSearch":1, "changeable":1, "filterable":0, "timeout":60, "ext":"null$$$proxy","style": {"type": "rect","ratio": 1.5}},
 
-{"key":"色播","name":"色播🔞","type":3,"api":"./json/色播.js","searchable":1,"changeable":0,"style":{"type":"list"}}
+{"key":"色播","name":"色播🔞","type":3,"api":"./json/sb.js","searchable":1,"changeable":0,"style":{"type":"list"}}
 ]
 }
