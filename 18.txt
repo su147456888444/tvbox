@@ -8,4 +8,3 @@
 极限,https://z88.ubtvfans.com:443/live/rx3/405/f72f337b1279855143cddce063a60cd6/index.m3u8
 彩k,https://z88.ubtvfans.com:443/live/rx3/415/24833f79298189b7d1b60e9d59af0018/index.m3u8
 香蕉,http://125.227.210.55:22522/VideoInput/play.ts
-JaPan,http://rhsbjv7k.tvclub.xyz/iptv/56E8HVDHBARKLQ/6225/index.m3u8
