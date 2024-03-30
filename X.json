@@ -3,15 +3,15 @@
 "sites":[
 {"key":"荐片","name":"//JianPian","type":3,"api":"csp_JianPian","searchable":1,"quickSearch":0,"filterable":1,"changeable":0,"hide":1,"ext":"https://ownjpykxttjzuhy.jiesiwa.com"},
 
-{"key":"阿里盘搜","name":"//阿里盘","type":3,"api":"csp_AliPS","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"hide":1,"ext":"http://127.0.0.1:9978/file/XYQTVBox/alitoken.txt"},
+{"key":"阿里盘搜","name":"//阿里盘搜","type":3,"api":"csp_AliPS","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"hide":1,"ext":"http://127.0.0.1:9978/file/XYQTVBox/alitoken.txt"},
 
-{"key":"盘搜索","name":"//盘搜索","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"hide":1,"ext":"./json/盘搜索.json"},
+{"key":"盘搜索","name":"//盘搜索","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"hide":1,"ext":"./json/pss.json"},
 
-{"key":"云盘资源","name":"//云盘资","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"hide":1,"ext":"./json/云盘资源.json"},
+{"key":"云盘资源","name":"//云盘资源","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"hide":1,"ext":"./json/zpzy.json"},
 
-{"key":"影搜","name":"//影搜索","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"playerType":-1,"hide":1,"ext":"./json/ys.json"},
+{"key":"影搜","name":"//影搜","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"playerType":-1,"hide":1,"ext":"./json/ys.json"},
 
-{"key":"土豆","name":"//土豆盘","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"playerType":-1,"hide":1,"ext":"./json/td.json"},
+{"key":"土豆","name":"//土豆","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"playerType":-1,"hide":1,"ext":"./json/td.json"},
 
 {"key":"找资源","name":"//找资源","type":3,"api":"csp_Zhaozy","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"playerType":-1,"hide":1,"ext":"{\"username\":\"aayyy5618@126.com\",\"password\":\"su123999\",\"searchurl\":\"https://zhaoziyuan1.cc/so?filename={wd}\"}"},
 
