@@ -11,4 +11,5 @@ tvbs NEWS,https://www.youtube.com/watch?v=m_dhMSvUCIc
 中天新闻,https://www.youtube.com/watch?v=oIgbl7t0S_w
 中天新闻2台,https://www.youtube.com/watch?v=WPfPjbOLNfE
 东森新闻,https://www.youtube.com/watch?v=2dfAzcDf8Zg
-万秀猪王,https://www.youtube.com/watch?v=ADDSmXoPDY8
+中视综艺,https://www.youtube.com/watch?v=ADDSmXoPDY8
+华视综艺,https://www.youtube.com/watch?v=lsFtLpSuf_g
