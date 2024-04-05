@@ -8,3 +8,8 @@
 极限,https://z88.ubtvfans.com:443/live/rx3/405/f72f337b1279855143cddce063a60cd6/index.m3u8
 彩k,https://z88.ubtvfans.com:443/live/rx3/415/24833f79298189b7d1b60e9d59af0018/index.m3u8
 香蕉,http://125.227.210.55:22522/VideoInput/play.ts
+潘多拉,https://18.svi-studio.com/live/673960949860/294164781253/3.m3u8
+香蕉台,https://18.svi-studio.com/live/673960949860/294164781253/4.m3u8
+松视1,https://18.svi-studio.com/live/673960949860/294164781253/5.m3u8
+松视2,https://18.svi-studio.com/live/673960949860/294164781253/6.m3u8
+惊艳台,https://18.svi-studio.com/live/673960949860/294164781253/01.m3u8
