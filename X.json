@@ -19,6 +19,8 @@
 
 {"key":"AI3","name":"//AI3搜索","type":1,"api":"http://124.222.30.115/mb/api.php/provide/vod/?ac=videolist","playerType":2,"searchable":1,"quickSearch":1},
 
+{"key":"海外看","name":"//海外看(VPN)","api":"https://haiwaikan.com/api.php/provide/vod/at/xml/?ac=list","playerType":2,"searchable":1,"quickSearch":1},
+
 {"key":"push_agent","name":"//推送丷","type":3,"api":"csp_PushAgent","searchable":0,"quickSearch":0,"filterable":0,"changeable":0,"hide":1,"ext":"http://127.0.0.1:9978/file/XYQTVBox/alitoken.txt"}
 ],
 "lives":[
