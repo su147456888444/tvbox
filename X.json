@@ -26,8 +26,7 @@
 "lives":[
 {"name":"YouTube","type":0,"url":"./YouTube.txt"},
 {"name":"fmm","type":0,"url":"https://live.fanmingming.com/tv/m3u/ipv6.m3u"},
-{"name":"酒店源","type":0,"url":"https://ghproxy.net/https://raw.githubusercontent.com/ssili126/tv/main/itvlist.txt"},
-{"name":"18","type":0,"url":"./18.txt"}
+{"name":"jiudian","type":0,"url":"https://ghproxy.net/https://raw.githubusercontent.com/ssili126/tv/main/itvlist.txt"}
 ],
 
 "parses": [
