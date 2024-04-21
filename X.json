@@ -13,8 +13,6 @@
 
 {"key":"土豆","name":"//土豆","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"playerType":-1,"hide":1,"ext":"./json/td.json"},
 
-{"key":"找资源","name":"//找资源","type":3,"api":"csp_Zhaozy","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"playerType":-1,"hide":1,"ext":"{\"username\":\"aayyy5618@126.com\",\"password\":\"su123999\",\"searchurl\":\"https://zhaoziyuan1.cc/so?filename={wd}\"}"},
-
 {"key":"AI2","name":"//AI2🔍","type":1,"api":"http://124.222.116.5/mb/api.php/provide/vod/?ac=videolist","playerType":2,"searchable":1,"quickSearch":1},
 
 {"key":"AI3","name":"//AI3🔍","type":1,"api":"http://124.222.30.115/mb/api.php/provide/vod/?ac=videolist","playerType":2,"searchable":1,"quickSearch":1},
