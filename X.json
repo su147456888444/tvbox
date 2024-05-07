@@ -9,7 +9,7 @@
 
 {"key":"云盘资源","name":"//云盘资源","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"hide":1,"ext":"./json/ypzy.json"},
 
-{"key":"影搜","name":"//影搜","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"playerType":-1,"hide":1,"ext":"./json/ys.json"},
+{"key":"影搜","name":"//影搜","type":3,"api":"csp_AliPS","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"playerType":-1,"hide":1,"ext":"./json/ys.json"},
 
 {"key":"土豆","name":"//土豆","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"playerType":-1,"hide":1,"ext":"./json/td.json"},
 
