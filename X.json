@@ -1,8 +1,6 @@
 {
 "spider":"./jar/0312.jar",
 "sites":[
-{"key":"荐片","name":"//JianPian","type":3,"api":"csp_JianPian","searchable":1,"quickSearch":0,"filterable":1,"changeable":0,"hide":1,"ext":"https://ownjpykxttjzuhy.jiesiwa.com"},
-
 {"key":"阿里盘搜","name":"//阿里盘搜","type":3,"api":"csp_AliPS","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"hide":1,"ext":"http://127.0.0.1:9978/file/XYQTVBox/alitoken.txt"},
 
 {"key":"盘搜索","name":"//盘搜索","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"hide":1,"ext":"./json/pss.json"},
