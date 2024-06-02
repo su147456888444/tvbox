@@ -19,11 +19,11 @@
 
 
 
-{"key":"盘搜索","name":"盘搜索","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"hide":1,"ext":"./js/pss.json"},
+{"key":"盘搜索","name":"盘搜索","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"hide":1,"ext":"./json/pss.json"},
 
-{"key":"云盘资源","name":"云盘资源","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"hide":1,"ext":"./js/ypzy.json"},
+{"key":"云盘资源","name":"云盘资源","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"hide":1,"ext":"./json/ypzy.json"},
 
-{"key":"土豆","name":"土豆","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"playerType":-1,"hide":1,"ext":"./js/td.json"},
+{"key":"土豆","name":"土豆","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"playerType":-1,"hide":1,"ext":"./json/td.json"},
 
 
 
