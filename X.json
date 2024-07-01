@@ -2,19 +2,11 @@
 "spider":"./0312.jar",
 "logo": "./Q.jpg",
 "sites":[
-{"key":"黑木耳","name":"黑木耳","api":"https://xml.heimuer.xyz/api.php/provide/vod/at/xml/?ac=list","playerType":2,"searchable":1,"quickSearch":1,"playUrl":"https://player.heimuer.tv/index.html?url="},
-
 {"key":"360","name":"360","api":"https://360zy.com/api.php/provide/vod/at/xml","playerType":2,"searchable":1,"quickSearch":1,"playUrl":"https://www.360jiexi.com/player/?url="},
 
 {"key":"华为","name":"华为","api":"https://hw8.live/api.php/provide/vod/at/xml/?ac=list","playerType":2,"searchable":1,"quickSearch":1,"playUrl":"https://player.huawei8.live/player?url="},
 
 {"key":"飞刀","name":"飞刀","api":"http://iycms.feidaozy.com/api.php/provide/vod/at/xml","playerType":2,"searchable":1,"quickSearch":1,"playUrl":"http://www.feidaozy.com/template/mizhi_ikun/mizhi/live/aliplay.php?url="},
-
-{"key":"红牛","name":"红牛","api":"https://www.hongniuzy2.com/api.php/provide/vod/at/xml/","playerType":2,"searchable":1,"quickSearch":1,"playUrl":"https://www.hnjiexi.com/m3u8/?url="},
-
-{"key":"光速","name":"光速","api":"https://api.guangsuapi.com/api.php/provide/vod/at/xml/","playerType":2,"searchable":1,"quickSearch":1,"playUrl":"https://www.gszyv.com/m3u8/?url="},
-
-{"key":"虎牙","name":"虎牙","api":"https://www.huyaapi.com/api.php/provide/vod/at/xml/","playerType":2,"searchable":1,"quickSearch":1,"playUrl":"https://huyajx.com/play/?url="},
 
 {"key":"Aymt","name":"Aymt","type":1,"api":"http://124.222.116.5/mb/api.php/provide/vod/?ac=videolist","playerType":2,"searchable":1,"quickSearch":1},
 
