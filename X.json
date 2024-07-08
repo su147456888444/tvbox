@@ -2,23 +2,23 @@
 "spider":"./0312.jar",
 "logo":"./Q.jpg",
 "sites":[
-{"key": "虎牙","name": "虎牙","type": 3,"api": "./libs/drpy2.min.js","searchable": 1,"quickSearch": 1,"filterable": 1,"order_num": 0,"ext": "./drpy_js/虎牙.js"},
+{"key": "虎牙","name": "虎牙","type": 3,"api": "./libs/drpy2.min.js","searchable": 1,"quickSearch": 1,"filterable": 1,"order_num": 0,"ext": "./json/虎牙.js"},
 
 {"key":"Aymt","name":"Aymt","type":1,"api":"http://124.222.116.5/mb/api.php/provide/vod/?ac=videolist","playerType":2,"searchable":1,"quickSearch":1},
 
 {"key":"华为","name":"华为","api":"https://cjhwba.com/api.php/provide/vod/at/xml/?ac=list","playerType":2,"searchable":1,"quickSearch":1,"playUrl":"https://player.hw8.lol/player?url="},
 
-{"key": "飞刀","name": "飞刀","type": 3,"api": "./libs/drpy2.min.js","searchable": 1,"quickSearch": 1,"filterable": 1,"order_num": 0,"ext": "./js/飞刀资源[资].js"},
+{"key": "飞刀","name": "飞刀","type": 3,"api": "./libs/drpy2.min.js","searchable": 1,"quickSearch": 1,"filterable": 1,"order_num": 0,"ext": "./json/飞刀.js"},
 
-{"key": "黑木耳","name": "黑木耳","type": 3,"api": "./libs/drpy2.min.js","searchable": 1,"quickSearch": 1,"filterable": 1,"order_num": 0,"ext": "./js/黑木耳资源[资].js"},
+{"key": "黑木耳","name": "黑木耳","type": 3,"api": "./libs/drpy2.min.js","searchable": 1,"quickSearch": 1,"filterable": 1,"order_num": 0,"ext": "./json/黑木耳.js"},
 
-{"key": "魔都","name": "魔都","type": 3,"api": "./libs/drpy2.min.js","searchable": 1,"quickSearch": 1,"filterable": 1,"order_num": 0,"ext": "./js/魔都资源[资].js"},
+{"key": "魔都","name": "魔都","type": 3,"api": "./libs/drpy2.min.js","searchable": 1,"quickSearch": 1,"filterable": 1,"order_num": 0,"ext": "./json/魔都.js"},
 
-{"key": "卧龙","name": "卧龙","type": 3,"api": "./libs/drpy2.min.js","searchable": 1,"quickSearch": 1,"filterable": 1,"order_num": 0,"ext": "./js/卧龙资源[资].js"},
+{"key": "卧龙","name": "卧龙","type": 3,"api": "./libs/drpy2.min.js","searchable": 1,"quickSearch": 1,"filterable": 1,"order_num": 0,"ext": "./json/卧龙.js"},
 
-{"key":"盘搜索","name":"盘搜索","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"hide":1,"ext":"./pss.json"},
+{"key":"盘搜索","name":"盘搜索","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"hide":1,"ext":"./json/pss.json"},
 
-{"key":"云盘资源","name":"云盘资源","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"hide":1,"ext":"./ypzy.json"},
+{"key":"云盘资源","name":"云盘资源","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"hide":1,"ext":"./json/ypzy.json"},
 
 {"key":"push_agent","name":"推送","type":3,"api":"csp_PushAgent","searchable":0,"quickSearch":0,"filterable":0,"changeable":0,"hide":1,"ext":"http://127.0.0.1:9978/file/XYQTVBox/alitoken.txt"}
 ],
