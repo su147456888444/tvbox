@@ -1,5 +1,5 @@
 {
-"spider":"./0312.jar",
+"spider":"./jar/0312.jar",
 "logo":"./Q.jpg",
 "sites":[
 {"key": "虎牙","name": "虎牙","type": 3,"api": "./libs/drpy2.min.js","searchable": 1,"quickSearch": 1,"filterable": 1,"order_num": 0,"ext": "./json/虎牙.js"},
