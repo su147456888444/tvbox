@@ -8,8 +8,6 @@
 
 {"key":"华为","name":"华为","api":"https://cjhwba.com/api.php/provide/vod/at/xml/?ac=list","playerType":2,"searchable":1,"quickSearch":1,"playUrl":"https://player.hw8.lol/player?url="},
 
-{"key": "飞刀","name": "飞刀","type": 3,"api": "./libs/drpy2.min.js","searchable": 1,"quickSearch": 1,"filterable": 1,"order_num": 0,"ext": "./json/飞刀.js"},
-
 {"key": "黑木耳","name": "黑木耳","type": 3,"api": "./libs/drpy2.min.js","searchable": 1,"quickSearch": 1,"filterable": 1,"order_num": 0,"ext": "./json/黑木耳.js"},
 
 {"key": "魔都","name": "魔都","type": 3,"api": "./libs/drpy2.min.js","searchable": 1,"quickSearch": 1,"filterable": 1,"order_num": 0,"ext": "./json/魔都.js"},
