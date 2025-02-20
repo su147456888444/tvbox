@@ -1,0 +1,96 @@
+{
+    "spider": "./茶佬.jar",
+    "logo":"https://github.com/su147456888444/tvbox/blob/main/Q.jpg",
+    "sites": [
+
+        {
+            "key": "hi视频(沐辰)",
+            "name": "hi视",
+            "type": 4,
+            "api": "https://py.doube.eu.org/spider?site=UpFuHn",
+            "searchable": 1,
+            "quickSearch": 0,
+            "filterable": 0,
+            "changeable": 0
+        },
+        {
+            "key": "金牌(沐辰)",
+            "name": "金牌",
+            "type": 3,
+            "api": "https://json.doube.eu.org/python/py_jieyingshi.py",
+            "searchable": 1,
+            "quickSearch": 0,
+            "filterable": 0,
+            "changeable": 0
+        },
+        {
+            "key": "欧乐(沐辰)",
+            "name": "欧乐",
+            "type": 4,
+            "api": "https://py.doube.eu.org/spider?site=OleVod",
+            "searchable": 1,
+            "quickSearch": 0,
+            "filterable": 0,
+            "changeable": 0
+        },
+        {
+            "key": "爱瓜(沐辰)",
+            "name": "爱瓜",
+            "type": 4,
+            "api": "https://spider.doube.eu.org/spider?site=AiGuaTV",
+            "searchable": 1,
+            "quickSearch": 0,
+            "filterable": 0,
+            "changeable": 0
+        },
+        {
+            "key": "如意(采集)",
+            "name": "如意",
+            "api": "https://cj.rycjapi.com/api.php/provide/vod/at/xml/",
+            "playerType": 2,
+            "searchable": 1,
+            "quickSearch": 1,
+            "playUrl": "https://ryplayer.com/?url="
+        },
+        {
+            "key": "星芽(道长)",
+            "name": "星芽短剧",
+            "type": 3,
+            "api": "./drpy_libs/drpy2.min.js",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "order_num": 0,
+            "ext": "./drpy_js/星芽短剧.js"
+        },
+        {
+            "key": "Csp_星辰影视(茶佬)",
+            "name": "星辰",
+            "type": 3,
+            "api": "csp_AppWyBase",
+            "searchable": 1,
+            "quickSearch": 1,
+            "changeable": 0,
+            "ext": "http://www.xingchenwu.com/"
+        },
+        {
+            "key": "Csp_七新影视(茶佬)",
+            "name": "七新",
+            "type": 3,
+            "api": "csp_AppWyBase",
+            "searchable": 1,
+            "quickSearch": 1,
+            "changeable": 0,
+            "ext": "http://www.7xdy.com/"
+        },
+        {
+            "key": "小苹果(茶佬)",
+            "name": "Apple",
+            "type": 3,
+            "api": "csp_AppApple",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1
+        }
+    ]
+}
