@@ -1,17 +1,30 @@
 {
-    "spider": "./茶佬.jar",
-    "logo":"./Q.jpg",
+    "spider": "./yt.jar",
+    "logo": "https://gh-proxy.com/https://raw.githubusercontent.com/su147456888444/tvbox/main/Q.jpg",
     "sites": [
-
         {
-            "key": "hi视频(沐辰)",
-            "name": "hi视",
+            "key": "youtube",
+            "name": "youtube",
             "type": 4,
-            "api": "https://py.doube.eu.org/spider?site=UpFuHn",
+            "api": "http://127.0.0.1:1988",
+            "style": {
+                "type": "rect",
+                "ratio": 1.33
+            },
             "searchable": 1,
-            "quickSearch": 0,
-            "filterable": 0,
-            "changeable": 0
+            "changeable": 1
+        },
+        {
+            "key": "短剧",
+            "name": "短剧",
+            "type": 4,
+            "api": "http://127.0.0.1:1988/lb?lb=2",
+            "searchable": 1,
+            "style": {
+                "type": "rect",
+                "ratio": 1.33
+            },
+            "changeable": 1
         },
         {
             "key": "金牌(沐辰)",
@@ -24,7 +37,17 @@
             "changeable": 0
         },
         {
-            "key": "欧乐(沐辰)",
+            "key": "py_UpFuHn(沐辰)",
+            "name": "Hi视",
+            "type": 4,
+            "api": "https://py.doube.eu.org/spider?site=UpFuHn",
+            "searchable": 1,
+            "quickSearch": 0,
+            "filterable": 0,
+            "changeable": 0
+        },
+        {
+            "key": "py_OleVod(沐辰)",
             "name": "欧乐",
             "type": 4,
             "api": "https://py.doube.eu.org/spider?site=OleVod",
@@ -34,10 +57,10 @@
             "changeable": 0
         },
         {
-            "key": "爱瓜(沐辰)",
-            "name": "爱瓜",
+            "key": "py_Dm84(沐辰)",
+            "name": "动漫",
             "type": 4,
-            "api": "https://spider.doube.eu.org/spider?site=AiGuaTV",
+            "api": "https://py.doube.eu.org/spider?site=Dm84",
             "searchable": 1,
             "quickSearch": 0,
             "filterable": 0,
@@ -64,30 +87,11 @@
             "ext": "./drpy_js/星芽短剧.js"
         },
         {
-            "key": "Csp_星辰影视(茶佬)",
-            "name": "星辰",
-            "type": 3,
-            "api": "csp_AppWyBase",
-            "searchable": 1,
-            "quickSearch": 1,
-            "changeable": 0,
-            "ext": "http://www.xingchenwu.com/"
-        },
-        {
-            "key": "Csp_七新影视(茶佬)",
-            "name": "七新",
-            "type": 3,
-            "api": "csp_AppWyBase",
-            "searchable": 1,
-            "quickSearch": 1,
-            "changeable": 0,
-            "ext": "http://www.7xdy.com/"
-        },
-        {
             "key": "小苹果(茶佬)",
             "name": "Apple",
             "type": 3,
             "api": "csp_AppApple",
+            "jar": "./茶佬.jar",
             "searchable": 1,
             "quickSearch": 1,
             "filterable": 1
