@@ -1,6 +1,6 @@
 {
     "spider": "./yt.jar",
-    "logo": "https://gh-proxy.com/https://raw.githubusercontent.com/su147456888444/tvbox/main/Q.jpg",
+    "logo": "./Q.jpg",
     "sites": [
         {
             "key": "youtube",
