@@ -37,14 +37,14 @@
             "changeable": 1
         },
         {
-            "key": "Apple",
+            "key": "小苹果(茶佬)",
             "name": "Apple",
             "type": 3,
-            "api": "csp_LiteApple",
-            "jar": "./xyq.jar",
-            "filterable": 1,
+            "api": "csp_AppApple",
+            "jar": "./茶佬.jar",
+            "searchable": 1,
             "quickSearch": 1,
-            "searchable": 1
+            "filterable": 1
         },
         {
             "key": "iKanbot",
