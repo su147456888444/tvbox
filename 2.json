@@ -58,15 +58,13 @@
             "ext": "https://v.aikanbot.com"
         },
         {
-            "key": "不卡",
-            "name": "不卡",
+            "key": "i电影",
+            "name": "i电影",
             "type": 3,
-            "api": "csp_XYQHiker",
-            "jar": "./xyq.jar",
+            "api": "./drpy_js/i电影.py",
             "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1,
-            "ext": "./drpy_js/盒子.json"
+            "filterable": 0,
+            "changeable": 0
         },
         {
             "key": "爱瓜",
