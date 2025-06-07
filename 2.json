@@ -58,15 +58,6 @@
             "ext": "https://v.aikanbot.com"
         },
         {
-            "key": "i电影",
-            "name": "i电影",
-            "type": 3,
-            "api": "./drpy_js/i电影.py",
-            "searchable": 1,
-            "filterable": 0,
-            "changeable": 0
-        },
-        {
             "key": "爱瓜",
             "name": "爱瓜",
             "type": 3,
@@ -93,15 +84,6 @@
             "api": "csp_TTian",
             "playerType": 1,
             "ext": "7lj763gg09397919456493i0h44j8681highi4"
-        },
-        {
-            "key": "热播",
-            "name": "热播",
-            "type": 3,
-            "jar": "./qiaoji.jar;md5;80a382420022360ef4d5c65b9a0c56be",
-            "api": "csp_TTian",
-            "playerType": 1,
-            "ext": "7lj763gg0939791h1l3888jig44gi291li"
         },
         {
             "key": "yizys",
