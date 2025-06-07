@@ -135,17 +135,6 @@
             "filterable": 0,
             "playerType": 2,
             "ext": "7lj763gg0939795i067li482k704i2igg2k6980j95i631231j5203kgkg585g1k12j84jhl881j8396340hh487l3h30kk8l42l6851klhgjlk836ig69hj36k31i5ikhlki3gjli7k"
-        },
-        {
-            "key": "push_agent",
-            "name": "推送",
-            "type": 3,
-            "jar": "./qiaoji.jar;md5;80a382420022360ef4d5c65b9a0c56be",
-            "api": "csp_PushAgent",
-            "searchable": 0,
-            "quickSearch": 0,
-            "filterable": 0,
-            "ext": "6666666666666666"
         }
     ],
     "parses": [
