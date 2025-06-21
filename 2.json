@@ -67,6 +67,13 @@
             "changeable": 0
         },
         {
+            "key": "瓜子",
+            "name": "瓜子",
+            "type": 3,
+            "api": "./drpy_libs/drpy2.min.js",
+            "ext": "./drpy_js/瓜子.js"
+        },
+        {
             "key": "欧乐",
             "name": "欧乐",
             "type": 4,
