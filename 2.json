@@ -110,24 +110,6 @@
             "ext": "7lj763gg402i7942403h83i2h945858hljhji148i18k2837535112l2qiaojik9075l17028i49g192419i8g3245h3j1l9gi02h6k7732650h3h09jkg759j65hj39l50347k3gj97l4g12l7h6418h6k9j04l26i1glgj3631973hh280lkihjh "
         },
         {
-            "key": "趣看",
-            "name": "趣看",
-            "type": 3,
-            "jar": "./qiaoji.jar;md5;80a382420022360ef4d5c65b9a0c56be",
-            "api": "csp_Muou",
-            "playerType": 2,
-            "ext": "7lj763gg402i7942463j9j9jg1499j87l9g9i413il8gqiaoji20g7g4919j3g019296lk9351hh3k5gg38lj0754il3jg"
-        },
-        {
-            "key": "晴空",
-            "name": "晴空",
-            "type": 3,
-            "jar": "./qiaoji.jar;md5;80a382420022360ef4d5c65b9a0c56be",
-            "api": "csp_Xdai",
-            "playerType": 2,
-            "ext": "7lj763gg402i7942463j9j9jg8558j9jlgh1j913il86313j776l14ljjh3l5k383999648j9064g6h22738938il8jk30k2i6427h67jkhglji910996ig539"
-        },
-        {
             "key": "AI2",
             "name": "AI2",
             "type": 3,
@@ -150,6 +132,25 @@
             "filterable": 0,
             "playerType": 2,
             "ext": "7lj763gg0939795i067li482k704i2igg2k6980j95i631231j5203kgkg585g1k12j84jhl881j8396340hh487l3h30kk8l42l6851klhgjlk836ig69hj36k31i5ikhlki3gjli7k"
+        }
+    ],
+    "lives": [
+        {
+            "name": "youtube",
+            "type": "0",
+            "pass": true,
+            "url": "./youtube.txt"
+        },
+        {
+            "name": "MQ",
+            "api": "csp_MQiTV",
+            "jar": "./fm.jar",
+            "ext": [
+                {
+                    "name": "MQiTV",
+                    "url": "https://59.125.210.231:4433"
+                }
+            ]
         }
     ],
     "parses": [
