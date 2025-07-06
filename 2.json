@@ -1,5 +1,5 @@
 {
-    "spider": "./yt.jar",
+    "spider": "./xyq.jar",
     "logo": "./Q.jpg",
     "sites": [
         {
@@ -21,20 +21,7 @@
             "searchable": 1,
             "quickSearch": 1,
             "filterable": 1,
-            "jar": "./xyq.jar",
             "ext": "./drpy_js/虎牙.json"
-        },
-        {
-            "key": "youtube",
-            "name": "youtube",
-            "type": 4,
-            "api": "http://127.0.0.1:1988",
-            "style": {
-                "type": "rect",
-                "ratio": 1.33
-            },
-            "searchable": 1,
-            "changeable": 1
         },
         {
             "key": "小苹果(茶佬)",
@@ -51,7 +38,6 @@
             "name": "iKanbot",
             "type": 3,
             "api": "csp_Ikanbot",
-            "jar": "./xyq.jar",
             "searchable": 1,
             "quickSearch": 1,
             "filterable": 1,
