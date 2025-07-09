@@ -3,17 +3,6 @@
     "logo": "./Q.jpg",
     "sites": [
         {
-            "key": "虎牙",
-            "name": "虎牙live",
-            "type": 3,
-            "api": "csp_XYQHiker",
-            "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1,
-            "jar": "./香佬.jar",
-            "ext": "./drpy_js/虎牙.json"
-        },
-        {
             "key": "youtube",
             "name": "youtube",
             "type": 4,
