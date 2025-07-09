@@ -26,14 +26,13 @@
             "changeable": 1
         },
         {
-            "key": "小苹果",
+            "key": "Apple",
             "name": "Apple",
             "type": 3,
-            "api": "csp_AppApple",
-            "jar": "./茶佬.jar",
+            "api": "./drpy_js/Apple.py",
             "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1
+            "filterable": 0,
+            "changeable": 0
         },
         {
             "key": "爱瓜",
