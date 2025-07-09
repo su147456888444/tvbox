@@ -15,11 +15,11 @@
             "changeable": 1
         },
         {
-            "key": "小苹果(茶佬)",
+            "key": "小苹果",
             "name": "Apple",
             "type": 3,
             "api": "csp_AppApple",
-            "jar": "./茶佬.jar",
+            "jar": "./hccx.jar",
             "searchable": 1,
             "quickSearch": 1,
             "filterable": 1
