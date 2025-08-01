@@ -130,7 +130,7 @@ console.log(JSON.stringify(GM_info));
                     vod_actor: tags.join(" "),
                     vod_content: $(".content-details__title").text(),
                     vod_play_from: "XOJAV",
-                    vod_play_url: "720P$" + unsafeWindow.stream,
+                    vod_play_url: "老僧酿酒、名妓读经$" + unsafeWindow.stream,
                 };
                 return {list: [vod]};
             },
