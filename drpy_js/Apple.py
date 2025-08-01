@@ -1,6 +1,6 @@
 
 # -*- coding: utf-8 -*-
-# by @嗷呜
+# by @嗷呜  http://asp.xpgtv.com http://item.xpgcom.com
 import sys
 sys.path.append('..')
 from base.spider import Spider
@@ -19,7 +19,7 @@ class Spider(Spider):
     def destroy(self):
         pass
 
-    host='http://item.xpgcom.com'
+    host='http://asp.xpgtv.com'
 
     headers = {
       "User-Agent": "okhttp/3.12.11"
