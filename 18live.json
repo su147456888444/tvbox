@@ -1,0 +1,27 @@
+{
+    "spider": "./fm.jar",
+    "lives": [
+        {
+            "name": "MQiTV",
+            "api": "csp_MQiTV",
+            "ext": [
+                {
+                    "name": "MQiTV",
+                    "url": "https://59.125.210.231:4433"
+                }
+            ]
+        },
+        {
+            "name": "FreesHot",
+            "type": 3,
+            "api": "./FreesHot.py",
+            "ext": {}
+        },
+        {
+            "name": "167",
+            "type": "0",
+            "pass": true,
+            "url": "./167.txt"
+        }
+    ]
+}
