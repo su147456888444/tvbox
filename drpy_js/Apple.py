@@ -98,7 +98,7 @@ class Spider(Spider):
             'vod_actor':v.get('actor'),
             'vod_director':v.get('director'),
             'vod_content':v.get('content'),
-            'vod_play_from': '老僧酿酒、名妓读经',
+            'vod_play_from': '老僧酿酒',
             'vod_play_url': '#'.join([f"{i['key']}${i['url']}" for i in v['urls']])
         }
         return {'list':[vod]}

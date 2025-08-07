@@ -131,7 +131,7 @@ class Spider(Spider):
                 a = '.'.join(b)
                 play.append(itt['info']['tips'] + "$" + a)
                 break
-        vod["vod_play_from"] = '老僧酿酒、名妓读经'
+        vod["vod_play_from"] = '老僧酿酒'
         vod["vod_play_url"] = "#".join(play)
         result = {"list": [vod]}
         return result

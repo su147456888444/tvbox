@@ -125,7 +125,7 @@ class Spider(Spider):
                 bq.extend(['[a=cr:' + json.dumps({'id': j.attr('href').split('/',3)[-1], 'name': j.text()}) + '/]' + j.text() + '[/a]' for j in i('a').items()])
             elif re.search(r"标籤:",xxx):
                 cd.extend(['[a=cr:' + json.dumps({'id': j.attr('href').split('/',3)[-1], 'name': j.text()}) + '/]' + j.text() + '[/a]' for j in i('a').items()])
-        np={'老僧酿酒、名妓读经':urls,'书生玩剑、将军作文':self.getfov(ids[0])}
+        np={'老僧酿酒':urls,'更多推荐':self.getfov(ids[0])}
         vod = {
             'type_name': c.eq(-3)('a').text(),
             'vod_year': c.eq(0)('time').text(),
@@ -301,7 +301,7 @@ class Spider(Spider):
             ctx = QuickJSContext.create()
             result=ctx.evaluate(f"{js_code};source")
             ctx.destroy()
-            return f"多画质${result}"
+            return f"名妓读经${result}"
         except Exception as e:
             self.log(f"执行失败: {e}")
             return None

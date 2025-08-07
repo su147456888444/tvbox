@@ -118,7 +118,7 @@ class Spider(Spider):
     def detailContent(self, ids):
         url=f"{self.host}{ids[0]}"
         data=self.getpq(requests.get(url, headers=self.headers,proxies=self.proxies).text)
-        vod = {'vod_play_from': '老僧酿酒、名妓读经'}
+        vod = {'vod_play_from': '老僧酿酒'}
         try:
             clist = []
             if data('.tags .keywords a'):

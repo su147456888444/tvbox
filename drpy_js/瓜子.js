@@ -365,7 +365,7 @@ var rule = {
             vod_area: data2.vod_area,
             vod_director: data2.vod_director,
             img: data2.vod_pic,
-            vod_play_from: '老僧酿酒、名妓读经',
+            vod_play_from: '老僧酿酒',
             vod_play_url: nnnmm.join('#')
         }
     }),
