@@ -7,9 +7,8 @@ import re
 import sys
 import time
 import uuid
-from base64 import b64decode
-from urllib.parse import quote
 import requests
+from base64 import b64decode
 from Crypto.Hash import SHA1, HMAC
 from pyquery import PyQuery as pq
 sys.path.append('..')
@@ -71,7 +70,7 @@ class Spider(Spider):
 
     def categoryContent(self, tid, pg, filter, extend):
         params={
-            'page':'' if int(pg)==1 else pg
+            'page':pg
         }
         ft = {
             'filters': extend.get('filters', ''),
@@ -89,12 +88,11 @@ class Spider(Spider):
             }
         params.update(ft)
         params={k: v for k, v in params.items() if v}
-        url=f"{self.host}/{tid}"
-        if self.cfproxy:
-            pstr='&'.join([f"{k}={v}" for k, v in params.items() if v])
-            purl,params=quote(f"{url}{'?' if pstr else ''}{pstr}"),None
-            url=f"{self.cfproxy}{purl}"
-        data=pq(requests.get(url,params=params,headers=self.headers,proxies=self.proxy).content)
+        req = requests.Request(
+            url=f"{self.host}/{tid}",
+            params=params,
+        ).prepare()
+        data=pq(requests.get(f"{self.cfproxy}{req.url}",headers=self.headers,proxies=self.proxy).content)
         result = {}
         if tid in ['cn/genres', 'cn/makers']:
             videos = self.gmsca(data)
@@ -116,25 +114,25 @@ class Spider(Spider):
         urls=self.execute_js(sctx)
         if not urls:urls=f"嗅探${urlllll}"
         c=v('.space-y-2 .text-secondary')
-        ac,dt,bq,cd=[],[],[],['点击展开↓↓↓\n']
+        ac,dt,cd,bq=[],[],[],['点击展开↓↓↓\n']
         for i in c.items():
             xxx=i('span').text()
             if re.search(r"导演:|发行商:",xxx):
                 dt.extend(['[a=cr:' + json.dumps({'id': j.attr('href').split('/',3)[-1], 'name': j.text()}) + '/]' + j.text() + '[/a]' for j in i('a').items()])
             elif re.search(r"女优:",xxx):
                 ac.extend(['[a=cr:' + json.dumps({'id': j.attr('href').split('/',3)[-1], 'name': j.text()}) + '/]' + j.text() + '[/a]' for j in i('a').items()])
-            elif re.search(r"类型:",xxx):
+            elif re.search(r"类型:|系列:",xxx):
                 bq.extend(['[a=cr:' + json.dumps({'id': j.attr('href').split('/',3)[-1], 'name': j.text()}) + '/]' + j.text() + '[/a]' for j in i('a').items()])
-            elif re.search(r"标籤:|系列:",xxx):
+            elif re.search(r"标籤:",xxx):
                 cd.extend(['[a=cr:' + json.dumps({'id': j.attr('href').split('/',3)[-1], 'name': j.text()}) + '/]' + j.text() + '[/a]' for j in i('a').items()])
-        np={'老僧酿酒、名妓读经':urls,'更多推荐':self.getfov(ids[0])}
+        np={'老僧酿酒、名妓读经':urls,'书生玩剑、将军作文':self.getfov(ids[0])}
         vod = {
             'type_name': c.eq(-3)('a').text(),
             'vod_year': c.eq(0)('time').text(),
-            'vod_remarks': ' '.join(bq),
+            'vod_remarks': ' '.join(cd),
             'vod_actor': ' '.join(ac),
             'vod_director': ' '.join(dt),
-            'vod_content': f"{' '.join(cd)}\n{v('.text-secondary.break-all').text()}"
+            'vod_content': f"{' '.join(bq)}\n{v('.text-secondary.break-all').text()}"
         }
         names,plist=[],[]
         for i,j in np.items():
@@ -146,13 +144,11 @@ class Spider(Spider):
         return {'list': [vod]}
 
     def searchContent(self, key, quick, pg="1"):
-        params={'page': pg}
-        url = f"{self.host}/search/{key}"
-        if self.cfproxy:
-            pstr = '&'.join([f"{k}={v}" for k, v in params.items() if v])
-            purl, params = quote(f"{url}?{pstr}"), None
-            url = f"{self.cfproxy}{purl}"
-        data = pq(requests.get(url, params=params, headers=self.headers, proxies=self.proxy).content)
+        req = requests.Request(
+            url=f"{self.host}/search/{key}",
+            params={'page': pg},
+        ).prepare()
+        data = pq(requests.get(f"{self.cfproxy}{req.url}", headers=self.headers, proxies=self.proxy).content)
         return {'list': self.getlist(data('.grid-cols-2.md\\:grid-cols-3 .thumbnail.group')),'page':pg}
 
     def playerContent(self, flag, id, vipFlags):
