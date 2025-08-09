@@ -1,6 +1,6 @@
 {
  "spider": "./yt.jar",
-    "wallpaper": "https://tuapi.eees.cc/api.php?category=fengjing&type=302",
+    
     "sites": [
         {
             "key": "cctv",
@@ -15,10 +15,10 @@
         },
         {
             "key": "油管清单播放",
-            "name": "油管清单播放",
+            "name": "油管播放清单",
             "type": 4,
             "api": "http://127.0.0.1:1988/lb?lb=9",
-            "ext": "/storage/emulated/0/lz/json/油管/",
+            "ext": "./json/油管/",
             "style": {
                 "type": "rect",
                 "ratio": 1.33
@@ -27,10 +27,10 @@
         },
         {
             "key": "影视清单播放",
-            "name": "影视清单播放",
+            "name": "影视播放清单",
             "type": 4,
             "api": "http://127.0.0.1:1988/lb?lb=9",
-            "ext": "/storage/emulated/0/lz/json/影视/",
+            "ext": "./json/影视/",
             "style": {
                 "type": "rect",
                 "ratio": 1.33
@@ -38,8 +38,8 @@
             "changeable": 1
         },        
         {
-            "key": "服务器油管go",
-            "name": "服务器油管go",
+            "key": "youtube",
+            "name": "youtube",
             "type": 4,
             "api": "http://127.0.0.1:1988",
             "style": {
@@ -51,10 +51,10 @@
         },
         {
             "key": "油管文件播放",
-            "name": "油管文件播放",
+            "name": "油管播放文件",
             "type": 4,
             "api": "http://127.0.0.1:1988/lb?lb=8",
-            "ext": "/storage/emulated/0/lz/wj/油管/",
+            "ext": "./wj/油管/",
             "style": {
                 "type": "rect",
                 "ratio": 1.33
@@ -66,7 +66,7 @@
             "name": "影视文件播放",
             "type": 4,
             "api": "http://127.0.0.1:1988/lb?lb=8",
-            "ext": "/storage/emulated/0/lz/wj/影视/",
+            "ext": "./wj/影视/",
             "style": {
                 "type": "rect",
                 "ratio": 1.33
@@ -78,7 +78,7 @@
             "name": "直播文件播放",
             "type": 4,
             "api": "http://127.0.0.1:1988/lb?lb=8",
-            "ext": "/storage/emulated/0/lz/wj/直播/",
+            "ext": "./wj/直播/",
             "style": {
                 "type": "rect",
                 "ratio": 1.33
@@ -90,7 +90,7 @@
             "name": "音乐文件播放",
             "type": 4,
             "api": "http://127.0.0.1:1988/lb?lb=8",
-            "ext": "/storage/emulated/0/lz/wj/音乐/",
+            "ext": "./wj/音乐/",
             "style": {
                 "type": "rect",
                 "ratio": 1.33
@@ -99,7 +99,7 @@
         },                                                
         {
             "key": "欧乐影院",
-            "name": "欧乐影院",
+            "name": "欧乐",
             "type": 4,
             "api": "http://127.0.0.1:1988/lb?lb=4",
             "searchable": 1,
@@ -111,7 +111,7 @@
         },
         {
             "key": "采集集合",
-            "name": "采集集合",
+            "name": "采集",
             "type": 1,
             "api": "http://127.0.0.1:1988/lb?lb=3",
             "searchable": 1,
@@ -132,25 +132,8 @@
                 "ratio": 1.33
             },
             "changeable": 1
-        },
-        {
-            "key": "bili",
-            "name": "🅱哔哩┃合集",
-            "type": 3,
-            "api": "csp_Bili",
-            "jar": "./fm.jar",
-            "style": {
-                "type": "list",
-                "ratio": 1.1
-            },
-            "searchable": 1,
-            "quickSearch": 0,
-            "changeable": 0,
-            "ext": {
-                "type": "沙雕穿越#电视剧#电影#短剧#广场舞#纪录片#综艺#虾仁动画#音乐#舞蹈#影视#知识#美食#风光#田园#户外#8K#徐云",
-                "cookie": ""
-            }
         }
+       
     ],
     "parses": [
         {
