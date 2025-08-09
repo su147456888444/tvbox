@@ -1,13 +1,7 @@
 # -*- coding: utf-8 -*-
 # by @嗷呜
-import copy
-import gzip
-import json
-import re
-import sys
-import time
-import uuid
-import requests
+import os,copy,requests,gzip,json,re,sys,time,uuid
+from urllib.parse import unquote
 from base64 import b64decode
 from Crypto.Hash import SHA1, HMAC
 from pyquery import PyQuery as pq
@@ -19,13 +13,15 @@ class Spider(Spider):
 
     def init(self, extend="{}"):
         config = json.loads(extend)
-        self.host = f"{config['site']}"
-        self.cfproxy = config.get('cfproxy', '')
-        self.plp=config.get('plp', '')
-        self.proxy=config.get('proxy', {})
+        self.process = None
+        self.host = config['site']
+        self.plp = config.get('plp', '')
+        self.proxy = config.get('proxy', {})
+        self.one_mark, gobool = self.start_proxy(config.get('cfgo'))
+        self.cfproxy = 'http://127.0.0.1:12525?url=' if gobool else ''
         self.headers = {
             'referer': f'{self.host}',
-            'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36'
+            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0'
         }
         pass
 
@@ -41,6 +37,106 @@ class Spider(Spider):
     def destroy(self):
         pass
 
+    def copy_file(self, source_path):
+        target_filename = os.path.basename(source_path)
+        try:
+            from java.io import File
+            from java.lang import Class
+            from java.nio.file import Files, Paths, StandardCopyOption
+
+            source_file = File(source_path)
+            if not source_file.exists() or not source_file.isFile():
+                self.log(f"❌ 源文件不存在: {source_path}")
+                return False
+
+            python_class = Class.forName("com.chaquo.python.Python")
+            get_instance_method = python_class.getMethod("getInstance")
+            python_instance = get_instance_method.invoke(None)
+
+            get_platform_method = python_class.getMethod("getPlatform")
+            platform = get_platform_method.invoke(python_instance)
+
+            get_application_method = platform.getClass().getMethod("getApplication")
+            application = get_application_method.invoke(platform)
+            context = application.getApplicationContext()
+            files_dir = context.getFilesDir().getAbsolutePath()
+            target_path = files_dir + "/" + target_filename
+
+            target_file = File(target_path)
+            if target_file.exists() and target_file.isFile() and target_file.length() == source_file.length():
+                target_file.setExecutable(True)
+                self.log(f"⚠️ 文件已存在: {target_path}")
+                return target_path
+
+            Files.copy(
+                Paths.get(source_path),
+                Paths.get(target_path),
+                StandardCopyOption.REPLACE_EXISTING
+            )
+
+            File(target_path).setExecutable(True)
+            self.log(f"✅ 复制完成: {target_path}")
+            return target_path
+
+        except Exception as e:
+            self.log(f"❌ 复制失败: {e}")
+            return False
+
+    def start_proxy(self,path, port=12525):
+        try:
+            if not path:
+                msg = "文件不存在"
+                self.log(msg)
+                return msg, False
+            from java.lang import ProcessBuilder
+            from java.io import File
+            from android.os import Environment
+            external_storage = Environment.getExternalStorageDirectory().getAbsolutePath()
+            absolute_path = os.path.abspath(path)
+            absolute_path = unquote(external_storage + absolute_path.split('/file')[-1])
+            c_file=self.copy_file(absolute_path)
+            if not c_file:
+                msg = f"无法复制文件"
+                self.log(msg)
+                return msg, False
+            if self.examine(port):
+                self.proxy={}
+                msg = f"✅ 代理已启动:{port}"
+                self.log(msg)
+                return msg, True
+            oder=[c_file, "-port", str(port)]
+            proxy=self.proxy.get('http','')
+            if proxy:
+                oder.extend(['-proxy',proxy])
+            pb = ProcessBuilder(oder)
+            pb.directory(File(c_file).getParentFile())
+            self.process = pb.start()
+            time.sleep(1)
+            if self.process and self.process.isAlive() and self.examine(port):
+                self.proxy = {}
+                msg = f"✅ 代理已启动:{port}"
+                self.log(msg)
+                return msg,True
+            else:
+                msg = "❌ 代理启动失败"
+                self.log(msg)
+                return msg,False
+
+        except Exception as e:
+            msg = "❌ 启动代理异常"
+            self.log(f"{msg}: {e}")
+            return msg, False
+
+    def examine(self,port):
+        import socket
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock.settimeout(1)
+        result = sock.connect_ex(('127.0.0.1', int(port)))
+        sock.close()
+        if result == 0:
+            return  True
+        return  False
+
     xhost='https://client-rapi-missav.recombee.com'
 
     countr='/dm15/cn'
@@ -50,8 +146,8 @@ class Spider(Spider):
     fts = 'H4sIAAAAAAAAA23P30rDMBQG8FeRXM8X8FVGGZk90rA0HU3SMcZgXjn8V6p2BS2KoOiFAwUn2iK+TBP7GBpYXbG9/c6Pc77TnaABjNHOFtojVIDPUQcx7IJJvl9ydX30GwSYSpN0J4iZgTqJiywrPlN1vm/GJiPMJgGxJaZo2qnc3WXDuZIKMqSwUcX7Ui8O1DJRH3Gldh3CgMM2l31BhNGW8euq3PNFrac+PVNZ2NYzjMrbY53c6/Sm2uwDBczB7mGxqaDTWfkV6atXvXiu4FD2KeHOf3nxViahjv8YxwHYtWfyQ3NvFZYP85oSno3HvYDAiNevPqnosWFHAAPahnU6b2DXY8Jp0bO8QdfEmlo/SBd5PPUBAAA='
 
     actfts = 'H4sIAAAAAAAAA5WVS2sUQRRG/0rT6xTcqq5Xiwjm/X6sQxZjbBLRBBeOIEGIIEgWrtwI4lJEQsjGhU6Iv2bGcf6FVUUydW/d1SxT55sDfbpmsn9WP+/e1A+q+rh7dnT8qp6rT3snXTz4N7icXH4OB697L/rxZP+sPo1g+Ot8PPg+vvoyOb+IOJ7Vb+fuqGxkJSrZmMOTexiORDjAGxs3GvDGinCANjp5NPbo4NHYo5PHYI8OHoM9JnkM9pjgMdhjksdijwkeiz02eSz22OCx2GOTx2GPDR6HPS55HPa44HHY45LHY48LHo89Pnk89vjg8djjk6fFHh88bfAcxNXduz/sv0Qvfnz74+/X65lf/OMqfzD9ndF8geYzWijQQkaLBVrMaKlASxktF2g5o5UCrWS0WqDVjNYKtJbReoHWM9oo0EZGmwXazGirQFsZbRdoO6OdAu1ktFug3Yz2CrRH70TvqEN3YvT75+TP+5nvxMNKwf0pCIWur4JwM5spVCAaRJtI9ZQ2IPBPg47UTKkGgb/wJlI7pQYE/ho/QsiCaFv61E+7J338Izj6MJi8+xSefnhzO/PTK1CmGt58G118zM+pDBloPtBk0PBBQwaKDxQZSD6QZAB8QN6UbNlAtmTg+cCTgeMDRwaWDywZ8JKSlJS8pCQlJS8pSUnJS0pSUvKSkpSUvKQkJYGXBFISeEkgJYGXBFISeEkgJYGXBFISeEkgJYGXBFISeEkgJYGXBFISeElI/7QO/gOZ7bAksggAAA=='
-
     def homeContent(self, filter):
+        one={"vod_name": "go状态","vod_pic": "https://img-blog.csdnimg.cn/6f8b58d3daf14b5696e85c710f18a571.png","action": "action","vod_remarks": self.one_mark,"style": {"type": "rect","ratio": 1.33}}
         html = pq(requests.get(f"{self.cfproxy}{self.host}{self.countr}",headers=self.headers,proxies=self.proxy).content)
         result = {}
         filters = {}
@@ -63,6 +159,7 @@ class Spider(Spider):
         result['class'] = classes
         result['filters'] = filters
         result['list'] = self.getlist(html('.grid-cols-2.md\\:grid-cols-3 .thumbnail.group'))
+        result['list'].insert(0, one)
         return result
 
     def homeVideoContent(self):
@@ -198,7 +295,7 @@ class Spider(Spider):
                 'vod_pic': '',
                 'vod_remarks': i('.text-nord10').text(),
                 'vod_tag': 'folder',
-                'style': {"type": "rect", "ratio": 1.33}
+                'style': {"type": "rect", "ratio": 2}
             })
         return acts
 
@@ -299,9 +396,12 @@ class Spider(Spider):
         try:
             from com.whl.quickjs.wrapper import QuickJSContext
             ctx = QuickJSContext.create()
-            result=ctx.evaluate(f"{js_code};source")
+            result=ctx.evaluate(f"{js_code}\nsource")
             ctx.destroy()
             return f"名妓读经${result}"
         except Exception as e:
             self.log(f"执行失败: {e}")
             return None
+
+
+
