@@ -27,12 +27,15 @@ class Spider(Spider):
 
     def homeContent(self, filter):
         result = {}
-        classes = [{'type_name': '女主播', 'type_id': 'girls'}, {'type_name': '情侣', 'type_id': 'couples'}, {'type_name': '男主播', 'type_id': 'men'}]
-        filters = {
-            'girls': [{'key': 'tag', 'value': [{'n': '中国', 'v': 'tagLanguageChinese'}, {'n': '美国', 'v': 'tagLanguageUSModels'}]}],
-            'couples': [{'key': 'tag', 'value': [{'n': '中国', 'v': 'tagLanguageChinese'}, {'n': '美国', 'v': 'tagLanguageUSModels'}]}],
-            'men': [{'key': 'tag', 'value': [{'n': '中国', 'v': 'tagLanguageChinese'}, {'n': '美国', 'v': 'tagLanguageUSModels'}, {'n': '情侣', 'v': 'sexGayCouples'}, {'n': '直男', 'v': 'orientationStraight'}]}]
-        }
+        classes = [{'type_name': '女主播', 'type_id': 'girls'}, {'type_name': '情侣', 'type_id': 'couples'}, {'type_name': '男主播', 'type_id': 'men'}, {'type_name': '跨性别', 'type_id': 'trans'}]
+        filters = {}
+        value = [{'n': '中国', 'v': 'tagLanguageChinese'}, {'n': '亚洲', 'v': 'ethnicityAsian'}, {'n': '白人', 'v': 'ethnicityWhite'}, {'n': '拉丁', 'v': 'ethnicityLatino'}, {'n': '混血', 'v': 'ethnicityMultiracial'}, {'n': '印度', 'v': 'ethnicityIndian'}, {'n': '阿拉伯', 'v': 'ethnicityMiddleEastern'}, {'n': '黑人', 'v': 'ethnicityEbony'}]
+        value_gay = [{'n': '情侣', 'v': 'sexGayCouples'}, {'n': '直男', 'v': 'orientationStraight'}]
+        for tid in ['girls', 'couples', 'men', 'trans']:
+            c_value = value[:]
+            if tid == 'men':
+                c_value += value_gay
+            filters[tid] = [{'key': 'tag', 'value': c_value}]
         result['class'] = classes
         result['filters'] = filters
         return result
