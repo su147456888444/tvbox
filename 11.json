@@ -15,7 +15,7 @@
         },
         {
             "key": "yt",
-            "name": "yt",
+            "name": "youtube",
             "type": 4,
             "api": "http://127.0.0.1:1988",
             "style": {
@@ -36,7 +36,7 @@
         },
         {
             "key": "dytt",
-            "name": "dytt",
+            "name": "电影天堂",
             "type": 1,
             "api": "http://caiji.dyttzyapi.com/api.php/provide/vod/?ac=list",
             "searchable": 1,
@@ -44,16 +44,8 @@
             "changeable": 0
         },
         {
-            "key": "iKanbot",
-            "name": "iKanbot",
-            "type": 3,
-            "changeable": 0,
-            "api": "./drpy_libs/drpy2.min.js",
-            "ext": "./drpy_js/iKanbot.js"
-        },
-        {
             "key": "yfsp",
-            "name": "yfsp",
+            "name": "爱壹帆",
             "jar": "./se.jar;md5;875ce871703d1c382e0498711b9d3ba0",
             "type": 3,
             "searchable": 1,
@@ -95,6 +87,22 @@
                     }
                 }
             }
+        },
+        {
+            "key": "賤",
+            "name": "賤",
+            "type": 3,
+            "api": "./drpy_js/賤.py",
+            "searchable": 1,
+            "filterable": 0,
+            "changeable": 0
+        },
+        {
+            "key": "优视频",
+            "name": "优视频",
+            "type": 4,
+            "changeable": 0,
+            "api": "https://tvbot.ggff.net/uvod"
         },
         {
             "key": "金牌",
