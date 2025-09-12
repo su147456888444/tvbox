@@ -213,7 +213,8 @@ class Spider(Spider):
             return ""
 
     def gethosts(self):
-        url='https://51cg.fun'
+        url='https://cabinet.rpiptqir.xyz/'
+        # url='https://51cg.fun'
         curl=self.getCache('host_51cn')
         if curl:
             try:
@@ -381,3 +382,4 @@ class Spider(Spider):
         except Exception as e:
             print(f"{str(e)}")
             return pq(data.encode('utf-8'))
+
