@@ -231,7 +231,7 @@
       "changeable": 0
     },
     {
-      "key": "py_BadNews",
+      "key": "py_BadNews·沐辰",
       "name": "BadNews·沐辰",
       "type": 4,
       "api": "https://py.doube.eu.org/spider?site=BadNews",
@@ -246,7 +246,7 @@
     },
     {
       "key": "py_Miss·沐辰",
-      "name": "missAV·沐辰",
+      "name": "MissAV·沐辰",
       "type": 4,
       "api": "https://py.doube.eu.org/spider?site=Miss",
       "searchable": 1,
