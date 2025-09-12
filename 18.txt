@@ -277,7 +277,7 @@
       "key": "php_madou·沐辰",
       "name": "麻豆·沐辰",
       "type": 4,
-      "api": "https://demobe.serv00.net/Spider/madou",
+      "api": "https://py.doube.eu.org/spider?site=MaDou",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 0,
