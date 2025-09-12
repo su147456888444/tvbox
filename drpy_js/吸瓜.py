@@ -213,8 +213,7 @@ class Spider(Spider):
             return ""
 
     def gethosts(self):
-        url='https://cabinet.rpiptqir.xyz/'
-        # url='https://51cg.fun'
+        url='https://cabinet.rpiptqir.xyz'
         curl=self.getCache('host_51cn')
         if curl:
             try:
@@ -289,7 +288,7 @@ class Spider(Spider):
             return []
 
     def get_domains(self):
-        html = self.getpq(requests.get("https://51cg.fun", headers=self.headers,proxies=self.proxies).text)
+        html = self.getpq(requests.get("https://cabinet.rpiptqir.xyz", headers=self.headers,proxies=self.proxies).text)
         html_pattern = r"Base64\.decode\('([^']+)'\)"
         html_match = re.search(html_pattern, html('script').eq(-1).text(), re.DOTALL)
         if not html_match:
@@ -382,4 +381,5 @@ class Spider(Spider):
         except Exception as e:
             print(f"{str(e)}")
             return pq(data.encode('utf-8'))
+
 
