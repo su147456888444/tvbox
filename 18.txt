@@ -13,7 +13,7 @@
     },
     {
       "key": "jable",
-      "name": "jable",
+      "name": "Jable",
       "type": 3,
       "quickSearch": 1,
       "searchable": 1,
@@ -120,7 +120,7 @@
     },
     {
       "key": "xojav",
-      "name": "xojav",
+      "name": "Xojav",
       "type": 3,
       "quickSearch": 1,
       "searchable": 1,
@@ -165,8 +165,8 @@
       }
     },
     {
-      "key": "mssav",
-      "name": "missav·嗷呜",
+      "key": "MissAV·嗷呜",
+      "name": "MissAV·嗷呜",
       "type": 3,
       "searchable": 1,
       "quickSearch": 0,
@@ -184,7 +184,7 @@
       }
     },
     {
-      "key": "lav",
+      "key": "lav·嗷呜",
       "name": "lav·嗷呜",
       "type": 3,
       "api": "./drpy_js/lav.py",
@@ -198,7 +198,7 @@
       }
     },
     {
-      "key": "肉视频",
+      "key": "肉视频·嗷呜",
       "name": "肉视频·嗷呜",
       "type": 3,
       "api": "./drpy_js/rsp.py",
@@ -212,7 +212,7 @@
       }
     },
     {
-      "key": "吸瓜",
+      "key": "吸瓜·嗷呜",
       "name": "吃瓜·嗷呜",
       "type": 3,
       "api": "./drpy_js/吸瓜.py",
@@ -221,8 +221,8 @@
       "changeable": 0
     },
     {
-      "key": "肉視頻",
-      "name": "肉視頻·沐辰",
+      "key": "肉视频·沐辰",
+      "name": "肉视频·沐辰",
       "type": 3,
       "api": "./drpy_js/rou.py",
       "searchable": 1,
@@ -245,7 +245,7 @@
       }
     },
     {
-      "key": "py_Miss",
+      "key": "py_Miss·沐辰",
       "name": "missAV·沐辰",
       "type": 4,
       "api": "https://py.doube.eu.org/spider?site=Miss",
@@ -255,7 +255,7 @@
       "changeable": 0
     },
     {
-      "key": "py_AiDou",
+      "key": "py_AiDou·沐辰",
       "name": "AiDou·沐辰",
       "type": 4,
       "api": "https://py.doube.eu.org/spider?site=AiDou",
@@ -269,7 +269,7 @@
       }
     },
     {
-      "key": "py_MrJav",
+      "key": "py_MrJav·沐辰",
       "name": "MRJav·沐辰",
       "type": 4,
       "api": "https://py.doube.eu.org/spider?site=MrJav",
@@ -283,7 +283,7 @@
       }
     },
     {
-      "key": "php_madou",
+      "key": "php_madou·沐辰",
       "name": "麻豆·沐辰",
       "type": 4,
       "api": "https://demobe.serv00.net/Spider/madou",
