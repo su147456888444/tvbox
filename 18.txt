@@ -212,15 +212,6 @@
       }
     },
     {
-      "key": "吸瓜·嗷呜",
-      "name": "吃瓜·嗷呜",
-      "type": 3,
-      "api": "./drpy_js/吸瓜.py",
-      "searchable": 1,
-      "filterable": 0,
-      "changeable": 0
-    },
-    {
       "key": "肉视频·沐辰",
       "name": "肉视频·沐辰",
       "type": 3,
