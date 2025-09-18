@@ -1,151 +1,202 @@
 # -*- coding: utf-8 -*-
-# by @嗷呜
-import concurrent.futures
 import json
 import sys
 sys.path.append('..')
 from base.spider import Spider
-
+import requests
 
 class Spider(Spider):
-
     def init(self, extend=""):
-        self.ihost=self.imgsite()
-        pass
+        self.host = 'https://ev5356.970xw.com'
+        self.headers = {
+            'User-Agent': 'Mozilla/5.0 (Linux; Android 9; V2196A Build/PQ3A.190705.08211809; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/91.0.4472.114 Mobile Safari/537.36;webank/h5face;webank/1.0;netType:NETWORK_WIFI;appVersion:416;packageName:com.jp3.xg3',
+            'Referer': self.host
+        }
+        self.ihost = self.imgsite()
+        self.skey = ''
+        self.stype = '3'
 
     def getName(self):
-        pass
-
-    def isVideoFormat(self, url):
-        pass
-
-    def manualVideoCheck(self):
-        pass
-
-    def destroy(self):
-        pass
-
-    host='https://ev5356.970xw.com'
-
-    headers={
-        'User-Agent': 'Mozilla/5.0 (Linux; Android 11; M2012K10C Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/87.0.4280.141 Mobile Safari/537.36;webank/h5face;webank/1.0;netType:NETWORK_WIFI;appVersion:416;packageName:com.jp3.xg3',
-        'Accept': 'application/json, text/plain, */*',
-        'x-requested-with': 'com.jp3.xg3',
-        'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
-    }
+        return "JianPian"
 
     def imgsite(self):
-        data=self.fetch(f"{self.host}/api/appAuthConfig",headers=self.headers).json()
-        host=data['data']['imgDomain']
-        return host if host.startswith('http') else f"https://{host}"
-
-    def getfts(self,id):
-        data=self.fetch(f"{self.host}/api/crumb/filterOptions",params={'fcate_pid':id},headers=self.headers).json()
-        fts=[{
-            'key': i['key'],
-            'name':i['key'],
-            'value': [{
-                'n': j['name'],
-                'v': j['id']
-            } for j in i['data']]
-        } for i in data['data']]
-        return id,fts
-
-    def build_cl(self,data,tid=''):
-        videos=[]
-        for i in data:
-            text=json.dumps(i.get('res_categories',[]))
-            videos.append({
-                'vod_id': f"{i.get('id')}@{'67' if json.dumps('短剧') in text and '67' in text else tid}",
-                'vod_name': i.get('title'),
-                'vod_pic': f"{self.ihost}{i.get('path') or i.get('cover_image') or i.get('thumbnail')}",
-                'vod_remarks': i.get('mask'),
-                'vod_year': i.get('score'),
-            })
-        return videos
+        data = requests.get(f"{self.host}/api/appAuthConfig", headers=self.headers).json()
+        host = data['data']['imgDomain']
+        return f"https://{host}" if not host.startswith('http') else host
 
     def homeContent(self, filter):
-        result = {}
-        cdata=self.fetch(f"{self.host}/api/term/home_fenlei",headers=self.headers).json()
-        hdata=self.fetch(f"{self.host}/api/dyTag/hand_data",params={'category_id':cdata['data'][0]['id']},headers=self.headers).json()
-        classes = []
-        filters = {}
-        for k in cdata['data']:
-            if 'abbr' in k:
-                classes.append({
-                    'type_name': k['name'],
-                    'type_id': k['id']
-                })
-        with concurrent.futures.ThreadPoolExecutor(max_workers=len(classes)) as executor:
-            future_to_aid = {
-                executor.submit(self.getfts, aid['type_id']): aid['type_id']
-                for aid in classes
-            }
-            for future in concurrent.futures.as_completed(future_to_aid):
-                aid = future_to_aid[future]
-                try:
-                    aid_id, fts = future.result()
-                    filters[aid_id] = fts
-                except Exception as e:
-                    print(f"Error processing aid {aid}: {e}")
-        result['class'] = classes
-        result['filters'] = filters
-        result['list'] = [item for i in hdata['data'].values() for item in self.build_cl(i)]
-        return result
+        classes = [
+            {'type_id': '1', 'type_name': '电影'},
+            {'type_id': '2', 'type_name': '电视剧'},
+            {'type_id': '3', 'type_name': '动漫'},
+            {'type_id': '4', 'type_name': '综艺'}
+        ]
+        filterObj = {
+            "1": [
+                {"key": "cateId", "name": "分类", "value": [
+                    {"v": "1", "n": "剧情"}, {"v": "2", "n": "爱情"}, {"v": "3", "n": "动画"}, {"v": "4", "n": "喜剧"},
+                    {"v": "5", "n": "战争"}, {"v": "6", "n": "歌舞"}, {"v": "7", "n": "古装"}, {"v": "8", "n": "奇幻"},
+                    {"v": "9", "n": "冒险"}, {"v": "10", "n": "动作"}, {"v": "11", "n": "科幻"}, {"v": "12", "n": "悬疑"},
+                    {"v": "13", "n": "犯罪"}, {"v": "14", "n": "家庭"}, {"v": "15", "n": "传记"}, {"v": "16", "n": "运动"},
+                    {"v": "18", "n": "惊悚"}, {"v": "20", "n": "短片"}, {"v": "21", "n": "历史"}, {"v": "22", "n": "音乐"},
+                    {"v": "23", "n": "西部"}, {"v": "24", "n": "武侠"}, {"v": "25", "n": "恐怖"}
+                ]},
+                {"key": "area", "name": "地區", "value": [
+                    {"v": "1", "n": "国产"}, {"v": "3", "n": "香港"}, {"v": "6", "n": "台湾"},
+                    {"v": "5", "n": "美国"}, {"v": "18", "n": "韩国"}, {"v": "2", "n": "日本"}
+                ]},
+                {"key": "year", "name": "年代", "value": [
+                    {"v": "107", "n": "2025"}, {"v": "119", "n": "2024"}, {"v": "153", "n": "2023"},
+                    {"v": "101", "n": "2022"}, {"v": "118", "n": "2021"}, {"v": "16", "n": "2020"},
+                    {"v": "7", "n": "2019"}, {"v": "2", "n": "2018"}, {"v": "3", "n": "2017"},
+                    {"v": "22", "n": "2016"}, {"v": "2015", "n": "2015以前"}
+                ]},
+                {"key": "sort", "name": "排序", "value": [
+                    {"v": "update", "n": "最新"}, {"v": "hot", "n": "最热"}, {"v": "rating", "n": "评分"}
+                ]}
+            ],
+            "2": [
+                {"key": "area", "name": "地區", "value": [
+                    {"v": "1", "n": "国产"}, {"v": "3", "n": "香港"}, {"v": "6", "n": "台湾"},
+                    {"v": "5", "n": "美国"}, {"v": "18", "n": "韩国"}, {"v": "2", "n": "日本"}
+                ]},
+                {"key": "year", "name": "年代", "value": [
+                    {"v": "107", "n": "2025"}, {"v": "119", "n": "2024"}, {"v": "153", "n": "2023"},
+                    {"v": "101", "n": "2022"}, {"v": "118", "n": "2021"}, {"v": "16", "n": "2020"},
+                    {"v": "7", "n": "2019"}, {"v": "2", "n": "2018"}, {"v": "3", "n": "2017"},
+                    {"v": "22", "n": "2016"}, {"v": "2015", "n": "2015以前"}
+                ]},
+                {"key": "sort", "name": "排序", "value": [
+                    {"v": "update", "n": "最新"}, {"v": "hot", "n": "最热"}, {"v": "rating", "n": "评分"}
+                ]}
+            ],
+            "3": [
+                {"key": "area", "name": "地區", "value": [
+                    {"v": "1", "n": "国产"}, {"v": "3", "n": "香港"}, {"v": "6", "n": "台湾"},
+                    {"v": "5", "n": "美国"}, {"v": "18", "n": "韩国"}, {"v": "2", "n": "日本"}
+                ]},
+                {"key": "year", "name": "年代", "value": [
+                    {"v": "107", "n": "2025"}, {"v": "119", "n": "2024"}, {"v": "153", "n": "2023"},
+                    {"v": "101", "n": "2022"}, {"v": "118", "n": "2021"}, {"v": "16", "n": "2020"},
+                    {"v": "7", "n": "2019"}, {"v": "2", "n": "2018"}, {"v": "3", "n": "2017"},
+                    {"v": "22", "n": "2016"}, {"v": "2015", "n": "2015以前"}
+                ]},
+                {"key": "sort", "name": "排序", "value": [
+                    {"v": "update", "n": "最新"}, {"v": "hot", "n": "最热"}, {"v": "rating", "n": "评分"}
+                ]}
+            ],
+            "4": [
+                {"key": "area", "name": "地區", "value": [
+                    {"v": "1", "n": "国产"}, {"v": "3", "n": "香港"}, {"v": "6", "n": "台湾"},
+                    {"v": "5", "n": "美国"}, {"v": "18", "n": "韩国"}, {"v": "2", "n": "日本"}
+                ]},
+                {"key": "year", "name": "年代", "value": [
+                    {"v": "107", "n": "2025"}, {"v": "119", "n": "2024"}, {"v": "153", "n": "2023"},
+                    {"v": "101", "n": "2022"}, {"v": "118", "n": "2021"}, {"v": "16", "n": "2020"},
+                    {"v": "7", "n": "2019"}, {"v": "2", "n": "2018"}, {"v": "3", "n": "2017"},
+                    {"v": "22", "n": "2016"}, {"v": "2015", "n": "2015以前"}
+                ]},
+                {"key": "sort", "name": "排序", "value": [
+                    {"v": "update", "n": "最新"}, {"v": "hot", "n": "最热"}, {"v": "rating", "n": "评分"}
+                ]}
+            ]
+        }
+        return {
+            'class': classes,
+            'filters': filterObj
+        }
 
     def homeVideoContent(self):
-        pass
+        url = f"{self.host}/api/slide/list?pos_id=88"
+        data = requests.get(url, headers=self.headers).json()
+        videos = [{
+            'vod_id': item['jump_id'],
+            'vod_name': item['title'],
+            'vod_pic': f"{self.ihost}{item['thumbnail']}",
+            'vod_remarks': "",
+            'style': json.dumps({"type": "rect", "ratio": 1.33})
+        } for item in data['data']]
+        return {'list': videos}
+
     def categoryContent(self, tid, pg, filter, extend):
-        
-        params={**{'category_id': tid,  'page': pg}, **extend}
-        path= '/api/crumb/shortList' if tid=='67' else '/api/crumb/list' 
-        #data=self.fetch(f"{self.host}{path}",params=params,headers=self.headers).json()
-        data=self.fetch(f"{self.host}{path}"+'&area=0&year=0&type=0&sort=0',params=params,headers=self.headers).json()
-        result = {}
-        result['list'] = self.build_cl(data['data'],tid)
-        result['page'] = pg
-        result['pagecount'] = 9999
-        result['limit'] = 90
-        result['total'] = 999999
-        return result
+        params = {
+            'fcate_pid': tid,
+            'page': pg,
+            'category_id': extend.get('cateId', ''),
+            'area': extend.get('area', ''),
+            'year': extend.get('year', ''),
+            'type': extend.get('cateId', ''),
+            'sort': extend.get('sort', '')
+        }
+        url = f"{self.host}/api/crumb/list"
+        data = requests.get(url, params=params, headers=self.headers).json()
+        videos = [{
+            'vod_id': item['id'],
+            'vod_name': item['title'],
+            'vod_pic': f"{self.ihost}{item['path']}",
+            'vod_remarks': item['mask'],
+            'vod_year': ""
+        } for item in data['data']]
+        return {
+            'list': videos,
+            'page': pg,
+            'pagecount': 99999,
+            'limit': 15,
+            'total': 99999
+        }
 
     def detailContent(self, ids):
-        ids=ids[0].split('@')
-        path, ikey = ('/api/detail', 'vid') if ids[-1] == '67' else ('/api/video/detailv2', 'id')
-        data=self.fetch(f"{self.host}{path}",params={ikey:ids[0]},headers=self.headers).json()
-        v=data['data']
-        if ids[-1]=='67':
-            pdata=v.get('playlist',[])
-            n,p=[pdata[0].get('source_config_name')],['#'.join([f"{i.get('title')}${i['url']}" for i in pdata])]
-        else:
-            n,p=[],[]
-            for i in v.get('source_list_source',[]):
-                n.append(i.get('name'))
-                p.append('#'.join([f"{j.get('source_name') or j.get('weight')}${j['url']}" for j in i.get('source_list',[])]))
-
+        id = ids[0]
+        url = f"{self.host}/api/video/detailv2?id={id}"
+        data = requests.get(url, headers=self.headers).json()
+        res = data['data']
+        
+        play_from = ['边下边播']
+        play_url = []
+        
+        # 寻找并处理“常规线路”
+        for source in res.get('source_list_source', []):
+            if source['name'] == '常规线路':
+                parts = [f"{part.get('source_name', part.get('weight', ''))}${part['url']}" for part in source.get('source_list', [])]
+                play_url.append('#'.join(parts))
+                break  # 找到后立即退出循环
+        
         vod = {
-            'type_name': '/'.join([i.get('name') for i in v.get('types',[])]),
-            'vod_year': v.get('year'),
-            'vod_area': v.get('area'),
-            'vod_remarks': v.get('update_cycle'),
-            'vod_actor': '/'.join([i.get('name') for i in v.get('actors',[])]),
-            'vod_content': v.get('description'),
-            'vod_play_from': '$$$'.join(n),
-            'vod_play_url': '$$$'.join(p)
+            'vod_id': id,
+            'type_name': '/'.join([t['name'] for t in res.get('types', [])]),
+            'vod_year': res.get('year', ''),
+            'vod_area': res.get('area', ''),
+            'vod_remarks': res.get('mask', ''),
+            'vod_content': res.get('description', ''),
+            'vod_play_from': '$$$'.join(play_from),
+            'vod_play_url': '$$$'.join(play_url)
         }
-        return {'list':[vod]}
-
-    def searchContent(self, key, quick, pg="1"):
-        data=self.fetch(f"{self.host}/api/v2/search/videoV2",params={'key':key,'page':pg,'pageSize':20},headers=self.headers).json()
-        return {'list':self.build_cl(data['data']),'page':pg}
+        return {'list': [vod]}
 
     def playerContent(self, flag, id, vipFlags):
-        return  {'parse': 0, 'url': id, 'header': {'User-Agent':self.headers['User-Agent']}}
+        if ".m3u8" in id:
+            return {'parse': 0, 'url': id}
+        else:
+            return {'parse': 0, 'url': f"tvbox-xg:{id}"}
 
-    def localProxy(self, param):
-        pass
+    def searchContent(self, key, quick, pg="1"):
+        url = f"{self.host}/api/v2/search/videoV2"
+        params = {'key': key, 'category_id': 88, 'page': pg, 'pageSize': 20}
+        data = requests.get(url, params=params, headers=self.headers).json()
+        videos = [{
+            'vod_id': item['id'],
+            'vod_name': item['title'],
+            'vod_pic': f"{self.ihost}{item['thumbnail']}",
+            'vod_remarks': item.get('mask', ''),
+            'vod_year': ""
+        } for item in data['data']]
+        return {
+            'list': videos,
+            'limit': 20
+        }
 
-    def liveContent(self, url):
-        pass
-
-
+    def isVideoFormat(self, url): pass
+    def manualVideoCheck(self): pass
+    def destroy(self): pass
+    def localProxy(self, param): pass
+    def liveContent(self, url): pass
