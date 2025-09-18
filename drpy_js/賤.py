@@ -151,7 +151,7 @@ class Spider(Spider):
         data = requests.get(url, headers=self.headers).json()
         res = data['data']
         
-        play_from = ['边下边播']
+        play_from = ['老僧酿酒']
         play_url = []
         
         # 寻找并处理“常规线路”
@@ -200,3 +200,4 @@ class Spider(Spider):
     def destroy(self): pass
     def localProxy(self, param): pass
     def liveContent(self, url): pass
+
