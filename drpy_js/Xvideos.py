@@ -153,7 +153,7 @@ class Spider(Spider):
             'vod_name': vn,
             'vod_director':pdtitle,
             'vod_remarks': data('.page-title').text().replace(vn,''),
-            'vod_play_from': 'Xvideos',
+            'vod_play_from': '老僧酿酒',
             'vod_play_url': ''
         }
         js_content = data("#video-player-bg script")
