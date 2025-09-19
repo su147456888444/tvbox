@@ -156,7 +156,7 @@ class Spider(Spider):
             'vod_name': vn,
             'vod_director': pdtitle,
             'vod_remarks': data('.rb-new__info').text(),
-            'vod_play_from': '老僧酿酒',
+            'vod_play_from': 'Xhamster',
             'vod_play_url': ''
         }
         try:
