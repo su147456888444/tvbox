@@ -151,7 +151,7 @@ class Spider(Spider):
         data = requests.get(url, headers=self.headers).json()
         res = data['data']
         
-        play_from = ['老僧酿酒']
+        play_from = ['老僧酿酒、边酿边播']
         play_url = []
         
         # 寻找并处理“常规线路”
@@ -183,13 +183,17 @@ class Spider(Spider):
         url = f"{self.host}/api/v2/search/videoV2"
         params = {'key': key, 'category_id': 88, 'page': pg, 'pageSize': 20}
         data = requests.get(url, params=params, headers=self.headers).json()
+        key_lower = key.lower()
+        filtered_items = [item for item in data['data'] if key_lower in item['title'].lower()]
+
         videos = [{
             'vod_id': item['id'],
             'vod_name': item['title'],
             'vod_pic': f"{self.ihost}{item['thumbnail']}",
             'vod_remarks': item.get('mask', ''),
             'vod_year': ""
-        } for item in data['data']]
+        } for item in filtered_items]
+
         return {
             'list': videos,
             'limit': 20
@@ -200,4 +204,3 @@ class Spider(Spider):
     def destroy(self): pass
     def localProxy(self, param): pass
     def liveContent(self, url): pass
-
