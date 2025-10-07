@@ -124,7 +124,7 @@ class Spider(Spider):
                 "vod_actor": "",
                 "vod_director": "",
                 "vod_content": "",
-                "vod_play_from": "有声小说",
+                "vod_play_from": "老僧酿酒",
                 "vod_play_url": ""
             }
 
@@ -200,7 +200,7 @@ class Spider(Spider):
                     "vod_actor": "",
                     "vod_director": "",
                     "vod_content": "",
-                    "vod_play_from": "老僧酿酒",
+                    "vod_play_from": "有声小说",
                     "vod_play_url": f"第1集${url}"
                 }]
             }
