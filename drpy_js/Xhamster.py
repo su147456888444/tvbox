@@ -133,7 +133,7 @@ class Spider(Spider):
         data = self.getpq(ids[0])
         link = data('link[rel="preload"][as="fetch"][crossorigin="true"]').attr('href')
         if  link:
-            ggggx = f"多音画$666_{link}"
+            ggggx = f"名妓读经$666_{link}"
         else:
             ggggx = f"嗅探${ids[0]}"
         vn = data('meta[property="og:title"]').attr('content')
