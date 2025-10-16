@@ -266,7 +266,7 @@ class Spider(Spider):
             "vod_actor": yanuan,
             "vod_director": '',
             "vod_content": content,
-            "vod_play_from": '老僧酿酒',
+            "vod_play_from": '书生玩剣ⁱ·*₁＇',
             "vod_play_url": bofang
                      })
 
@@ -376,4 +376,5 @@ class Spider(Spider):
             return self.proxyMedia(params)
         elif params['type'] == "ts":
             return self.proxyTs(params)
+
         return None
