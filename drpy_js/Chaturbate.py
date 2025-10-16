@@ -23,7 +23,7 @@ class Spider(Spider):
     def detailContent(self, ids):
         room_slug = ids[0]
         return {"list": [{"vod_id": room_slug, "vod_name": f"Chaturbate - {room_slug}", "vod_pic": "", 
-                "vod_play_from": "老僧酿酒、名妓读经", "vod_play_url": f"书生玩剣、将军作文${room_slug}"}]}
+                "vod_play_from": "书生玩剣ⁱ·*₁＇", "vod_play_url": f"名妓读经ⁱ·*₁＇${room_slug}"}]}
     def playerContent(self, flag, id, vipFlags):
         url, data, headers = "https://chaturbate.com/get_edge_hls_url_ajax/", {"room_slug": id}, {"X-Requested-With": "XMLHttpRequest"}
         try:
