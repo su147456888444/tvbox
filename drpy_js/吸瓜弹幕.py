@@ -88,7 +88,7 @@ class Spider(Spider):
     def detailContent(self, ids):
         url=ids[0] if ids[0].startswith("http") else f"{self.host}{ids[0]}"
         data=pq(requests.get(url, headers=self.headers,proxies=self.proxies).content)
-        vod = {'vod_play_from': '老僧酿酒'}
+        vod = {'vod_play_from': '书生玩剣ⁱ·*₁＇'}
         did = data('script[data-api]').attr('data-api')
         try:
             clist = []
@@ -403,4 +403,5 @@ class Spider(Spider):
         iv = b'97b60394abc2fbe1'
         cipher = AES.new(key, AES.MODE_CBC, iv)
         decrypted = unpad(cipher.decrypt(word), AES.block_size)
+
         return decrypted
