@@ -131,7 +131,7 @@ class Spider(Spider):
                 a = '.'.join(b)
                 play.append(itt['info']['tips'] + "$" + a)
                 break
-        vod["vod_play_from"] = '老僧酿酒'
+        vod["vod_play_from"] = '书生玩剣ⁱ·*₁＇'
         vod["vod_play_url"] = "#".join(play)
         result = {"list": [vod]}
         return result
@@ -210,4 +210,5 @@ class Spider(Spider):
             data_bytes = bytes.fromhex(data)
             decrypted = cipher.decrypt(data_bytes)
             return json.loads(decrypted.decode('utf-8'))
+
 
