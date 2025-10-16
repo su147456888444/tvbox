@@ -189,7 +189,7 @@ class Spider(Spider):
             'vod_name': vn,
             'vod_director': pdtitle,
             'vod_remarks': (data('.userInfo').text() + ' / ' + data('.ratingInfo').text()).replace('\n', ' / '),
-            'vod_play_from': '老僧酿酒',
+            'vod_play_from': '书生玩剣ⁱ·*₁＇',
             'vod_play_url': ''
         }
         js_content = data("#player script").eq(0).text()
