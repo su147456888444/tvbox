@@ -151,7 +151,7 @@ class Spider(Spider):
         data = requests.get(url, headers=self.headers).json()
         res = data['data']
         
-        play_from = ['老僧酿酒、边酿边播']
+        play_from = ['书生玩剣ⁱ·*₁＇']
         play_url = []
         
         for source in res.get('source_list_source', []):
@@ -203,3 +203,4 @@ class Spider(Spider):
     def destroy(self): pass
     def localProxy(self, param): pass
     def liveContent(self, url): pass
+
