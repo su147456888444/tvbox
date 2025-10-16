@@ -89,7 +89,7 @@ class Spider(Spider):
         dur_match = re.search(r"Duration:\s*([0-9:]+)", desc_text)
         duration = dur_match.group(1) if dur_match else ""
         encoded_url = self.e64(url)
-        play_url = f"名妓读经${encoded_url}"
+        play_url = f"名妓读经ⁱ·*₁＇${encoded_url}"
         vod = {
             "vod_id": url,
             "vod_name": title,
