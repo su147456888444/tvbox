@@ -109,7 +109,7 @@ class Spider(Spider):
         clj = '[a=cr:' + json.dumps({'id': vid[1] + 'click', 'name': vid[2]}) + '/]' + vid[2] + '[/a]'
         if 'click' in ids[0]:
             clj = vid[2]
-        vod = {'vod_director': clj, 'vod_play_from': "老僧酿酒", 'vod_play_url': vid[2] + "$" + data1}
+        vod = {'vod_director': clj, 'vod_play_from': "书生玩剣ⁱ·*₁＇", 'vod_play_url': vid[2] + "$" + data1}
         result = {"list": [vod]}
         return result
 
