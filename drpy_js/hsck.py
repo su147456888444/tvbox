@@ -287,7 +287,7 @@ class Spider(Spider):
                 "vod_name": title,
                 "vod_pic": self.getFullUrl(pic) if pic else "",
                 "vod_content": title,  # 用标题当简介
-                "vod_play_from": "老僧酿酒",
+                "vod_play_from": "书生玩剣ⁱ·*₁＇",
                 "vod_play_url": "#".join(play_urls)  # 使用#分隔多个播放源
             }
             
