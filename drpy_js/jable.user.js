@@ -206,7 +206,7 @@ console.log(JSON.stringify(GM_info));
                     vod_actor: vodActor.join(" ") + " " + categories.join(" "),
                     vod_content: $(".video-info h4").text(),
                     vod_play_from: $(".video-info .info-header .header-right h6").children().remove().end().text().trim(),
-                    vod_play_url: "老僧酿酒$" + unsafeWindow.hlsUrl,
+                    vod_play_url: "书生玩剣ⁱ·*₁＇$" + unsafeWindow.hlsUrl,
                 };
                 return {list: [vod]};
             },
