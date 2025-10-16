@@ -88,7 +88,7 @@ class Spider(Spider):
         n=data('.md\\:col-span-2 .px-2 .hidden').eq(0).text() or 'xxxx'
         vod = {
             'vod_content': ' '.join(['[a=cr:' + json.dumps({'id': j.attr('href'), 'name': j.text()}) + '/]' + j.text() + '[/a]' for j in data('.flex.justify-between div a').items()]),
-            'vod_play_from': '老僧酿酒',
+            'vod_play_from': '书生玩剣ⁱ·*₁＇',
             'vod_play_url': f"{n}${url}"
         }
         return {'list':[vod]}
@@ -125,4 +125,5 @@ class Spider(Spider):
             return pq(data.text)
         except Exception as e:
             print(f"{str(e)}")
+
             return pq(data.text.encode('utf-8'))
