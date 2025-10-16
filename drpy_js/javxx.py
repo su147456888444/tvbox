@@ -139,11 +139,11 @@ class Spider(Spider):
         data = self.getpq(requests.get(f"{self.host}{ids[0]}", headers=self.headers, proxies=self.proxies).text)
         dv = data('#video-details')
         pnpn = {
-            '老僧酿酒、名妓读经': f"{data('#video-info h1').text()}${data('#video-files div').attr('data-url')}",
-            '书生玩剑': '#'.join(
+            '书生玩剣ⁱ·*₁＇': f"{data('#video-info h1').text()}${data('#video-files div').attr('data-url')}",
+            '名妓读经ⁱ·*₁＇': '#'.join(
                 [f"{i('.info .title span').eq(-1).text()}$_gggb_{i('.info .title').attr('href')}" for i in
                  data('.main .vid-items .item').items()]),
-            '将军作文': '#'.join([f"{i('.info .title span').eq(-1).text()}$_gggb_{i('.info .title').attr('href')}" for i in
+            '将军作文ⁱ·*₁＇': '#'.join([f"{i('.info .title span').eq(-1).text()}$_gggb_{i('.info .title').attr('href')}" for i in
                               data('.vid-items.side .item').items()])
         }
         n, p = [], []
@@ -327,3 +327,4 @@ class Spider(Spider):
         except Exception as e:
             print(f"{str(e)}")
             return pq(data.encode('utf-8'))
+
