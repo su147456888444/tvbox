@@ -129,8 +129,8 @@ console.log(JSON.stringify(GM_info));
                     vod_remarks: categories.join(" "),
                     vod_actor: tags.join(" "),
                     vod_content: $(".content-details__title").text(),
-                    vod_play_from: "老僧酿酒",
-                    vod_play_url: "名妓读经$" + unsafeWindow.stream,
+                    vod_play_from: "书生玩剣ⁱ·*₁＇",
+                    vod_play_url: "名妓读经ⁱ·*₁＇$" + unsafeWindow.stream,
                 };
                 return {list: [vod]};
             },
