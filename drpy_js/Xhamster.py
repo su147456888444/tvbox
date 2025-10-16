@@ -133,7 +133,7 @@ class Spider(Spider):
         data = self.getpq(ids[0])
         link = data('link[rel="preload"][as="fetch"][crossorigin="true"]').attr('href')
         if  link:
-            ggggx = f"名妓读经$666_{link}"
+            ggggx = f"名妓读经ⁱ·*₁＇$666_{link}"
         else:
             ggggx = f"嗅探${ids[0]}"
         vn = data('meta[property="og:title"]').attr('content')
@@ -147,7 +147,7 @@ class Spider(Spider):
             'vod_name': vn,
             'vod_director': pdtitle,
             'vod_remarks': data('.rb-new__info').text(),
-            'vod_play_from': '老僧酿酒',
+            'vod_play_from': '书生玩剣ⁱ·*₁＇',
             'vod_play_url': ggggx
         }
         return {'list': [vod]}
