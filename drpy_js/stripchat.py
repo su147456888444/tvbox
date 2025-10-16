@@ -107,7 +107,7 @@ class Spider(Spider):
             "vod_pic": str(user['avatarUrl']),
             "vod_director": f"{flag}{username}{isLive}",
             "vod_remarks": remark,
-            'vod_play_from': '老僧酿酒',
+            'vod_play_from': '书生玩剣ⁱ·*₁＇',
             'vod_play_url': f"{id}${id}"
         }
         return {'list': [vod]}
