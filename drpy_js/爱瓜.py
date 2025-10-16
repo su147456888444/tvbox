@@ -421,7 +421,7 @@ class Spider(Spider):
             res = requests.get(url, headers=self.headers)
             root = etree.HTML(res.text.encode('utf-8'))
             # vod_play_from_list = root.xpath('//span[@class="source-item-label"]/text()')
-            vod_play_from = '$$$'.join(['老僧酿酒', '名妓读经', '书生玩剑'])
+            vod_play_from = '$$$'.join(['书生玩剣ⁱ·*₁＇', '名妓读经ⁱ·*₁＇', '将军作文ⁱ·*₁＇'])
             # 电视剧
             play_list1 = root.xpath('//ul[contains(@class, "qy-episode-num")]')
             # print(play_list1)
@@ -534,3 +534,4 @@ class Spider(Spider):
 
 if __name__ == '__main__':
     pass
+
