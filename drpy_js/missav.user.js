@@ -237,8 +237,8 @@ console.log(JSON.stringify(GM_info));
                     vod_remarks: formatDetail(detail, "类型"),
                     vod_actor: formatDetail(detail, "女优"),
                     vod_content: $('a.items-center:contains("显示更多")').length > 0 ? $("head meta[name=description]").attr("content") : $("head meta[property='og:title']").attr("content"),
-                    vod_play_from: "老僧酿酒",
-                    vod_play_url: "名妓读经$" + hls.url,
+                    vod_play_from: "书生玩剣ⁱ·*₁＇",
+                    vod_play_url: "名妓读经ⁱ·*₁＇$" + hls.url,
                 };
                 console.log({list: [vod]})
                 return {list: [vod]};
