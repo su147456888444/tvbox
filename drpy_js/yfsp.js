@@ -226,7 +226,7 @@ console.log(JSON.stringify(GM_info));
                     vod_area: videodetails.regional,
                     vod_content: videodetails.introduce,
                     vod_play_data: [{
-                        from: "老僧酿酒",
+                        from: "书生玩剣ⁱ·*₁＇",
                         media: media
                     }]
                 };
