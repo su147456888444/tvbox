@@ -37,7 +37,7 @@ class Spider(Spider):
         pass
 
     def getName(self):
-        return "🌈 老僧酿酒、吃瓜群众"
+        return "书生玩剣ⁱ·*₁＇"
 
     def isVideoFormat(self, url):
         # Treat direct media formats as playable without parsing
