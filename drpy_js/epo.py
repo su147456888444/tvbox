@@ -96,7 +96,7 @@ class Spider(Spider):
             "vod_pic": thumbnail,
             "vod_remarks": duration,
             "vod_content": desc_text.strip(),
-            "vod_play_from": "老僧酿酒",
+            "vod_play_from": "书生玩剣ⁱ·*₁＇",
             "vod_play_url": play_url
         }
         result['list'] = [vod]
