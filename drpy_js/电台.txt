@@ -21,4 +21,3 @@ FM105.6,https://live.ximalaya.com/radio-first-page-app/live/325/64.m3u8
 Мода 5,https://fl1001.bozztv.com/ushba-m9/tracks-v1a1/mono.m3u8
 Мода 6,https://fl1001.bozztv.com/ushba-m1/tracks-v1a1/mono.m3u8
 Fashion Channel,https://fl1001.bozztv.com/ushba19/tracks-v1a1/mono.m3u8
-Тик Ток,https://fl1001.bozztv.com/ushba61/index.m3u8
