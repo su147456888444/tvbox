@@ -1,0 +1,64 @@
+[
+    {
+        "name": "电台",
+        "url": "./电台.txt"
+    },
+    {
+        "name": "𝟭𝟴",
+        "url": "https://gitee.com/sji820/des/raw/master/0.jpg"
+    },
+    {
+        "name": "樱花",
+        "url": "http://204.152.198.206/dream.txt"
+    },
+    {
+        "name": "咪咕",
+        "url": "https://github.com/develop202/migu_video/raw/main/interface.txt"
+    },
+    {
+        "name": "4G",
+        "url": "http://www.52top.com.cn:678/iptv/台湾/4gtv.m3u"
+    },
+    {
+        "name": "ofiii",
+        "url": "http://www.52top.com.cn:678/iptv/台湾/ofiii订阅.php"
+    },
+    {
+        "name": "广电",
+        "url": "http://127.0.0.1:8081/湖北广电.php"
+    },
+    {
+        "name": "BXTV",
+        "url": "https://bxtv.3a.ink/live.m3u"
+    },
+    {
+        "name": "YanG",
+        "url": "https://tv.iill.top/m3u/Gather",
+        "ua": "okhttp/3.8.1"
+    },
+    {
+        "name": "LIVE",
+        "url": "https://m.iill.top/Live.m3u",
+        "ua": "okhttp/3.8.1"
+    },
+    {
+        "name": "LITV",
+        "url": "http://www.52top.com.cn:678/iptv/litv.php?p=阿里云香港",
+        "ua": "okhttp"
+    },
+    {
+        "name": "长寿",
+        "url": "http://mytv6688.xyz/云霄.txt",
+        "ua": "changshou/521"
+    },
+    {
+        "name": "长寿₁",
+        "url": "http://mytv6688.xyz/测试.txt",
+        "ua": "changshou/521"
+    },
+    {
+        "name": "肥羊",
+        "url": "https://live.ottiptv.cc/iptv.m3u?userid=7411490431&sign=71d912fb794da8f2608fa61ec62b3b9864c4fa93d6a8441c6dded46f6ca0c6fa83fb16b80fbd2d79e580fc2fe7b22a79e6cc1f064947d997072711aeb0f19f265f84459cdb57f1&auth_token=d96fbaaa295b1783fbd3a32899fccbd0",
+        "ua": "okHttp/Mod-1.4.0.0"
+    }
+]
