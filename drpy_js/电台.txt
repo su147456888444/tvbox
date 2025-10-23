@@ -2,20 +2,14 @@
 相声电台,http://stream-174.zeno.fm/yqawwmweq8mtv
 清晨音乐,https://live.ximalaya.com/radio-first-page-app/live/1011/64.m3u8
 怀集音乐,https://live.ximalaya.com/radio-first-page-app/live/966/64.m3u8
-Asia-粤语台,https://live.ximalaya.com/radio-first-page-app/live/999/64.m3u8
-Asia-经典台,https://live.ximalaya.com/radio-first-page-app/live/1005/64.m3u8
-Asia-音乐台,https://live.ximalaya.com/radio-first-page-app/live/764/64.m3u8
-Asia-HD音乐台,https://live.ximalaya.com/radio-first-page-app/live/1427/64.m3u8
-Asia-热歌台,https://live.ximalaya.com/radio-first-page-app/live/1908/64.m3u8
-Asia-96.5,https://live.ximalaya.com/radio-first-page-app/live/1003/64.m3u8
 动感音乐,https://live.ximalaya.com/radio-first-page-app/live/2687/64.m3u8
-CRI劲曲,http://sk.cri.cn/887.m3u8
-经典,https://live.ximalaya.com/radio-first-page-app/live/2689/64.m3u8
-年代音乐,https://live.ximalaya.com/radio-first-page-app/live/763/64.m3u8
-FM105.6,https://live.ximalaya.com/radio-first-page-app/live/325/64.m3u8
-音悦台,https://live.ximalaya.com/radio-first-page-app/live/2684/64.m3u8
-年代965,https://live.ximalaya.com/radio-first-page-app/live/2878/64.m3u8
-经典调频1038,https://live.ximalaya.com/radio-first-page-app/live/2728/64.m3u8
+经典调频,https://live.ximalaya.com/radio-first-page-app/live/2728/64.m3u8
+Asiaᶻ粤语台,https://live.ximalaya.com/radio-first-page-app/live/999/64.m3u8
+Asiaᶻ经典台,https://live.ximalaya.com/radio-first-page-app/live/1005/64.m3u8
+Asiaᶻ音乐台,https://live.ximalaya.com/radio-first-page-app/live/764/64.m3u8
+AsiaᶻHD音乐台,https://live.ximalaya.com/radio-first-page-app/live/1427/64.m3u8
+Asiaᶻ热歌台,https://live.ximalaya.com/radio-first-page-app/live/1908/64.m3u8
+Asiaᶻ96.5,https://live.ximalaya.com/radio-first-page-app/live/1003/64.m3u8
 走秀,#genre#
 Музыка 1,https://fl1001.bozztv.com/ushba-t2/tracks-v1a1/mono.m3u8
 Музыка 2,https://fl1001.bozztv.com/ushba-monj/tracks-v1a1/mono.m3u8
