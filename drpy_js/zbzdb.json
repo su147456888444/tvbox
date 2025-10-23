@@ -4,6 +4,10 @@
         "url": "./电台.txt"
     },
     {
+        "name": "咪咕",
+        "url": "https://github.com/develop202/migu_video/raw/main/interface.txt"
+    },
+    {
         "name": "BXTV",
         "url": "https://bxtv.3a.ink/live.m3u"
     },
