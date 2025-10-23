@@ -361,7 +361,7 @@ function saveCategoryItem(categoryId, categoryName, urls, typeName, imageUrl) {
         'vod_year': '',
         'vod_area': '书生玩剣ⁱ·*₁＇',
         'vod_actor': '老僧酿酒ⁱ·*₁＇',
-        'vod_director': '名妓读领ⁱ·*₁＇',
+        'vod_director': '名妓读经ⁱ·*₁＇',
         'vod_content': '',
         'vod_play_from': typeName,
         'vod_play_url': urls
