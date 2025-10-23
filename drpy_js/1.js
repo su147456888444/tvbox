@@ -1,7 +1,7 @@
 var globalHeaders = [];
 var classes = [];
 var categories = {}; // 修复：正确使用categories存储分类数据
-var picUrl = 'https://github.com/su147456888444/tvbox/raw/main/Q.jpg';
+var picUrl = 'https://raw.githubusercontent.com/su147456888444/tvbox/main/Q.jpg';
 var webPaths = {};
 var sourceHeaders = {};
 var sourceConfigs = {}; // 修复：统一使用sourceConfigs变量名
