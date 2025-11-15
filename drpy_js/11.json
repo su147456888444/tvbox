@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Music",
+        "url": "./电台.txt"
+    },
+    {
+        "name": "𝟭𝟴",
+        "url": "https://gitee.com/sji820/des/raw/master/0.jpg",
+        "ua": "okhttp",
+        "img": "https://raw.githubusercontent.com/su147456888444/tvbox/refs/heads/main/tu/7.jpg"
+    },
+    {
+        "name": "YanG",
+        "url": "https://tv.iill.top/m3u/Gather",
+        "ua": "okhttp/3.8.1",
+        "img": "https://raw.githubusercontent.com/su147456888444/tvbox/refs/heads/main/tu/2.jpg"
+    },
+    {
+        "name": "网络直播",
+        "url": "https://m.iill.top/Live.m3u",
+        "ua": "okhttp/3.8.1",
+        "img": "https://raw.githubusercontent.com/su147456888444/tvbox/refs/heads/main/tu/5.jpg"
+    }
+]
