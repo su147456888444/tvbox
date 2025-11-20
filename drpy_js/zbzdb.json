@@ -4,11 +4,19 @@
         "url": "./电台.txt"
     },
     {
+        "name": "𝟭𝟴",
+        "url": "https://gitee.com/sji820/des/raw/master/0.jpg"
+    },
+    {
         "name": "咪咕",
         "url": "https://github.com/develop202/migu_video/raw/main/interface.txt"
     },
     {
-        "name": "BXTV",
+        "name": "Jack",
+        "url": "https://php.946985.filegear-sg.me/jackTV.m3u"
+    },
+    {
+        "name": "bxtv",
         "url": "https://bxtv.3a.ink/live.m3u"
     },
     {
@@ -17,7 +25,7 @@
         "ua": "okhttp/3.8.1"
     },
     {
-        "name": "LIVE",
+        "name": "网络直播",
         "url": "https://m.iill.top/Live.m3u",
         "ua": "okhttp/3.8.1"
     }
