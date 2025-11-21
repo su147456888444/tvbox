@@ -8,7 +8,15 @@
         "url": "https://gitee.com/sji820/des/raw/master/0.jpg"
     },
     {
+        "name": "港台",
+        "url": "https://live.catvod.com/tv.m3u"
+    },
+    {
         "name": "咪咕",
+        "url": "https://iptv.catvod.com/tv.m3u"
+    },
+    {
+        "name": "咪咕₁",
         "url": "https://github.com/develop202/migu_video/raw/main/interface.txt"
     },
     {
